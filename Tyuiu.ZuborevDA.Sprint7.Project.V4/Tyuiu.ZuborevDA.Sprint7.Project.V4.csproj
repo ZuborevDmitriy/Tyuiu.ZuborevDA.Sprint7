@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{003804E2-326B-4527-892B-AB6C1C181DEB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Tyuiu.ZuborevDA.Sprint7.Project.V4</RootNamespace>
+    <AssemblyName>Tyuiu.ZuborevDA.Sprint7.Project.V4</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FormAbout_ZDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout_ZDA.Designer.cs">
+      <DependentUpon>FormAbout_ZDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataBase_ZDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataBase_ZDA.Designer.cs">
+      <DependentUpon>FormDataBase_ZDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInfo_ZDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInfo_ZDA.Designer.cs">
+      <DependentUpon>FormInfo_ZDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMain_ZDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMain_ZDA.Designer.cs">
+      <DependentUpon>FormMain_ZDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAbout_ZDA.resx">
+      <DependentUpon>FormAbout_ZDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataBase_ZDA.resx">
+      <DependentUpon>FormDataBase_ZDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMain_ZDA.resx">
+      <DependentUpon>FormMain_ZDA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16787048710840.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16883149893820.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

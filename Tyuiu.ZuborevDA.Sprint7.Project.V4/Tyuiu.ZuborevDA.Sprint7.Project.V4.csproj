@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{003804E2-326B-4527-892B-AB6C1C181DEB}</ProjectGuid>
+    <ProjectGuid>{5599A841-C6B1-4CF5-AC71-7F6FDD4BF0BF}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Tyuiu.ZuborevDA.Sprint7.Project.V4</RootNamespace>
     <AssemblyName>Tyuiu.ZuborevDA.Sprint7.Project.V4</AssemblyName>
@@ -46,24 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormAbout_ZDA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormAbout_ZDA.Designer.cs">
-      <DependentUpon>FormAbout_ZDA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormDataBase_ZDA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormDataBase_ZDA.Designer.cs">
-      <DependentUpon>FormDataBase_ZDA.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormInfo_ZDA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormInfo_ZDA.Designer.cs">
-      <DependentUpon>FormInfo_ZDA.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMain_ZDA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,12 +54,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FormAbout_ZDA.resx">
-      <DependentUpon>FormAbout_ZDA.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormDataBase_ZDA.resx">
-      <DependentUpon>FormDataBase_ZDA.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMain_ZDA.resx">
       <DependentUpon>FormMain_ZDA.cs</DependentUpon>
     </EmbeddedResource>
@@ -89,7 +65,6 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -103,12 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\16787048710840.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\16883149893820.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

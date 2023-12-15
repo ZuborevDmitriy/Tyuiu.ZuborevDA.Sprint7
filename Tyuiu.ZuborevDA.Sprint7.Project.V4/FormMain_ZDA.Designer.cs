@@ -31,25 +31,28 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         {
             this.menuStripUpPanel_ZDA = new System.Windows.Forms.MenuStrip();
             this.действияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочнаяИнформацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBoxBaza_ZDA = new System.Windows.Forms.GroupBox();
             this.dataGridViewBaza_ZDA = new System.Windows.Forms.DataGridView();
+            this.BookYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ReaderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TicketNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataGet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataGive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxTools_ZDA = new System.Windows.Forms.GroupBox();
-            this.buttonAdd_ZDA = new System.Windows.Forms.Button();
-            this.buttonUpdate_ZDA = new System.Windows.Forms.Button();
             this.buttonRemove_ZDA = new System.Windows.Forms.Button();
+            this.buttonUpdate_ZDA = new System.Windows.Forms.Button();
+            this.buttonAdd_ZDA = new System.Windows.Forms.Button();
+            this.openFileDialogTask_ZDA = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialogMatrix_ZDA = new System.Windows.Forms.SaveFileDialog();
             this.menuStripUpPanel_ZDA.SuspendLayout();
             this.groupBoxBaza_ZDA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaza_ZDA)).BeginInit();
@@ -73,47 +76,58 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             this.действияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.загрузитьToolStripMenuItem,
+            this.сохранитьToolStripMenuItem,
             this.удалитьToolStripMenuItem});
             this.действияToolStripMenuItem.Name = "действияToolStripMenuItem";
             this.действияToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.действияToolStripMenuItem.Text = "Действия";
+            // 
+            // загрузитьToolStripMenuItem
+            // 
+            this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.загрузитьToolStripMenuItem.Text = "Загрузить";
+            this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
+            // 
+            // сохранитьToolStripMenuItem
+            // 
+            this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.сохранитьToolStripMenuItem.Text = "Сохранить";
+            // 
+            // удалитьToolStripMenuItem
+            // 
+            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.удалитьToolStripMenuItem.Text = "Удалить";
             // 
             // оПрограммеToolStripMenuItem
             // 
             this.оПрограммеToolStripMenuItem.Name = "оПрограммеToolStripMenuItem";
             this.оПрограммеToolStripMenuItem.Size = new System.Drawing.Size(94, 20);
             this.оПрограммеToolStripMenuItem.Text = "О программе";
+            this.оПрограммеToolStripMenuItem.Click += new System.EventHandler(this.оПрограммеToolStripMenuItem_Click);
             // 
             // справочнаяИнформацияToolStripMenuItem
             // 
             this.справочнаяИнформацияToolStripMenuItem.Name = "справочнаяИнформацияToolStripMenuItem";
             this.справочнаяИнформацияToolStripMenuItem.Size = new System.Drawing.Size(161, 20);
             this.справочнаяИнформацияToolStripMenuItem.Text = "Справочная информация";
+            this.справочнаяИнформацияToolStripMenuItem.Click += new System.EventHandler(this.справочнаяИнформацияToolStripMenuItem_Click);
             // 
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
             this.выходToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.выходToolStripMenuItem.Text = "Выход";
-            // 
-            // загрузитьToolStripMenuItem
-            // 
-            this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.загрузитьToolStripMenuItem.Text = "Загрузить";
-            // 
-            // удалитьToolStripMenuItem
-            // 
-            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.удалитьToolStripMenuItem.Text = "Удалить";
+            this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
             // groupBoxBaza_ZDA
             // 
             this.groupBoxBaza_ZDA.Controls.Add(this.dataGridViewBaza_ZDA);
-            this.groupBoxBaza_ZDA.Location = new System.Drawing.Point(106, 173);
+            this.groupBoxBaza_ZDA.Location = new System.Drawing.Point(28, 156);
             this.groupBoxBaza_ZDA.Name = "groupBoxBaza_ZDA";
-            this.groupBoxBaza_ZDA.Size = new System.Drawing.Size(337, 400);
+            this.groupBoxBaza_ZDA.Size = new System.Drawing.Size(619, 400);
             this.groupBoxBaza_ZDA.TabIndex = 1;
             this.groupBoxBaza_ZDA.TabStop = false;
             this.groupBoxBaza_ZDA.Text = "База данных";
@@ -122,18 +136,23 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             this.dataGridViewBaza_ZDA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBaza_ZDA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.BookYear,
             this.Author,
             this.BookName,
-            this.BookYear,
             this.Price,
             this.ReaderName,
             this.TicketNumber,
             this.DataGet,
             this.DataGive});
-            this.dataGridViewBaza_ZDA.Location = new System.Drawing.Point(66, 53);
+            this.dataGridViewBaza_ZDA.Location = new System.Drawing.Point(18, 53);
             this.dataGridViewBaza_ZDA.Name = "dataGridViewBaza_ZDA";
-            this.dataGridViewBaza_ZDA.Size = new System.Drawing.Size(240, 150);
+            this.dataGridViewBaza_ZDA.Size = new System.Drawing.Size(580, 308);
             this.dataGridViewBaza_ZDA.TabIndex = 0;
+            // 
+            // BookYear
+            // 
+            this.BookYear.HeaderText = "Год издания";
+            this.BookYear.Name = "BookYear";
             // 
             // Author
             // 
@@ -144,11 +163,6 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             this.BookName.HeaderText = "Название книги";
             this.BookName.Name = "BookName";
-            // 
-            // BookYear
-            // 
-            this.BookYear.HeaderText = "Год издания";
-            this.BookYear.Name = "BookYear";
             // 
             // Price
             // 
@@ -187,14 +201,14 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.groupBoxTools_ZDA.TabStop = false;
             this.groupBoxTools_ZDA.Text = "Инструменты";
             // 
-            // buttonAdd_ZDA
+            // buttonRemove_ZDA
             // 
-            this.buttonAdd_ZDA.Location = new System.Drawing.Point(52, 71);
-            this.buttonAdd_ZDA.Name = "buttonAdd_ZDA";
-            this.buttonAdd_ZDA.Size = new System.Drawing.Size(75, 23);
-            this.buttonAdd_ZDA.TabIndex = 0;
-            this.buttonAdd_ZDA.Text = "Добавить";
-            this.buttonAdd_ZDA.UseVisualStyleBackColor = true;
+            this.buttonRemove_ZDA.Location = new System.Drawing.Point(52, 171);
+            this.buttonRemove_ZDA.Name = "buttonRemove_ZDA";
+            this.buttonRemove_ZDA.Size = new System.Drawing.Size(75, 23);
+            this.buttonRemove_ZDA.TabIndex = 2;
+            this.buttonRemove_ZDA.Text = "Удалить";
+            this.buttonRemove_ZDA.UseVisualStyleBackColor = true;
             // 
             // buttonUpdate_ZDA
             // 
@@ -205,14 +219,18 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.buttonUpdate_ZDA.Text = "Обновить";
             this.buttonUpdate_ZDA.UseVisualStyleBackColor = true;
             // 
-            // buttonRemove_ZDA
+            // buttonAdd_ZDA
             // 
-            this.buttonRemove_ZDA.Location = new System.Drawing.Point(52, 171);
-            this.buttonRemove_ZDA.Name = "buttonRemove_ZDA";
-            this.buttonRemove_ZDA.Size = new System.Drawing.Size(75, 23);
-            this.buttonRemove_ZDA.TabIndex = 2;
-            this.buttonRemove_ZDA.Text = "Удалить";
-            this.buttonRemove_ZDA.UseVisualStyleBackColor = true;
+            this.buttonAdd_ZDA.Location = new System.Drawing.Point(52, 71);
+            this.buttonAdd_ZDA.Name = "buttonAdd_ZDA";
+            this.buttonAdd_ZDA.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd_ZDA.TabIndex = 0;
+            this.buttonAdd_ZDA.Text = "Добавить";
+            this.buttonAdd_ZDA.UseVisualStyleBackColor = true;
+            // 
+            // openFileDialogTask_ZDA
+            // 
+            this.openFileDialogTask_ZDA.Filter = "Exel|*xlsx";
             // 
             // FormMain_ZDA
             // 
@@ -246,18 +264,21 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
         private System.Windows.Forms.GroupBox groupBoxBaza_ZDA;
         private System.Windows.Forms.DataGridView dataGridViewBaza_ZDA;
+        private System.Windows.Forms.GroupBox groupBoxTools_ZDA;
+        private System.Windows.Forms.Button buttonRemove_ZDA;
+        private System.Windows.Forms.Button buttonUpdate_ZDA;
+        private System.Windows.Forms.Button buttonAdd_ZDA;
+        private System.Windows.Forms.DataGridViewTextBoxColumn BookYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn Author;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn ReaderName;
         private System.Windows.Forms.DataGridViewTextBoxColumn TicketNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGet;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGive;
-        private System.Windows.Forms.GroupBox groupBoxTools_ZDA;
-        private System.Windows.Forms.Button buttonRemove_ZDA;
-        private System.Windows.Forms.Button buttonUpdate_ZDA;
-        private System.Windows.Forms.Button buttonAdd_ZDA;
+        private System.Windows.Forms.OpenFileDialog openFileDialogTask_ZDA;
+        private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogMatrix_ZDA;
     }
 }
 

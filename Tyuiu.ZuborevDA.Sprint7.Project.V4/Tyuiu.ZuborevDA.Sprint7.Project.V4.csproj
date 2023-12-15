@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAbout_ZDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAbout_ZDA.Designer.cs">
+      <DependentUpon>FormAbout_ZDA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInfo_ZDA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInfo_ZDA.Designer.cs">
+      <DependentUpon>FormInfo_ZDA.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMain_ZDA.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tyuiu.ZuborevDA.Sprint7.Project.V4.Lib\Tyuiu.ZuborevDA.Sprint7.Project.V4.Lib.csproj">
+      <Project>{dcb737b7-24a7-4e69-a076-44b29d219496}</Project>
+      <Name>Tyuiu.ZuborevDA.Sprint7.Project.V4.Lib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

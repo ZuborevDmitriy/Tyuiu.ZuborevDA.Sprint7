@@ -51,8 +51,8 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.buttonRemove_ZDA = new System.Windows.Forms.Button();
             this.buttonUpdate_ZDA = new System.Windows.Forms.Button();
             this.buttonAdd_ZDA = new System.Windows.Forms.Button();
-            this.openFileDialogTask_ZDA = new System.Windows.Forms.OpenFileDialog();
-            this.saveFileDialogMatrix_ZDA = new System.Windows.Forms.SaveFileDialog();
+            this.openFileDialogBaza_ZDA = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialogBaza_ZDA = new System.Windows.Forms.SaveFileDialog();
             this.menuStripUpPanel_ZDA.SuspendLayout();
             this.groupBoxBaza_ZDA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaza_ZDA)).BeginInit();
@@ -85,20 +85,21 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.загрузитьToolStripMenuItem.Text = "Загрузить";
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
+            this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             // 
             // оПрограммеToolStripMenuItem
@@ -227,10 +228,11 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.buttonAdd_ZDA.TabIndex = 0;
             this.buttonAdd_ZDA.Text = "Добавить";
             this.buttonAdd_ZDA.UseVisualStyleBackColor = true;
+            this.buttonAdd_ZDA.Click += new System.EventHandler(this.buttonAdd_ZDA_Click);
             // 
-            // openFileDialogTask_ZDA
+            // openFileDialogBaza_ZDA
             // 
-            this.openFileDialogTask_ZDA.Filter = "Exel|*xlsx";
+            this.openFileDialogBaza_ZDA.Filter = "Exel|*csv";
             // 
             // FormMain_ZDA
             // 
@@ -276,9 +278,9 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         private System.Windows.Forms.DataGridViewTextBoxColumn TicketNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGet;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGive;
-        private System.Windows.Forms.OpenFileDialog openFileDialogTask_ZDA;
+        private System.Windows.Forms.OpenFileDialog openFileDialogBaza_ZDA;
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
-        private System.Windows.Forms.SaveFileDialog saveFileDialogMatrix_ZDA;
+        private System.Windows.Forms.SaveFileDialog saveFileDialogBaza_ZDA;
     }
 }
 

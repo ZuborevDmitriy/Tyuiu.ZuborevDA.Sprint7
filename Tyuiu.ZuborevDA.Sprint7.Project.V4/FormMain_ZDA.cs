@@ -20,8 +20,8 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         {
             InitializeComponent();
 
-            openFileDialogTask_ZDA.Filter = "Значения, разделенные запятыми(*.xlsx)|*.xlsx|Все файлы(*.*)|*.*";
-            saveFileDialogMatrix_ZDA.Filter = "Значения, разделенные запятыми(*.xlsx)|*.xlsx|Все файлы(*.*)|*.*";
+            openFileDialogBaza_ZDA.Filter = "Значения, разделенные запятыми(*.csv)|*.csv|Все файлы(*.*)|*.*";
+            saveFileDialogBaza_ZDA.Filter = "Значения, разделенные запятыми(*.csv)|*.csv|Все файлы(*.*)|*.*";
         }
 
         static int rows;
@@ -49,19 +49,19 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
         public static string[,] LoadFromFileData(string filePath)
         {
-            string fileData = File.ReadAllText(filePath);
+            string fileData = System.IO.File.ReadAllText(filePath, Encoding.Default);
 
             fileData = fileData.Replace('\n', '\r');
             string[] lines = fileData.Split(new char[] { '\r' }, StringSplitOptions.RemoveEmptyEntries);
 
             rows = lines.Length;
-            columns = lines[0].Split(',').Length;
+            columns = lines[0].Split('\t').Length;
 
             string[,] arrayValues = new string[rows, columns];
 
             for (int r = 0; r < rows; r++)
             {
-                string[] line_r = lines[r].Split(',');
+                string[] line_r = lines[r].Split('\t');
 
                 for (int c = 0; c < columns; c++)
                 {
@@ -73,26 +73,92 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
         private void загрузитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            openFileDialogTask_ZDA.ShowDialog();
-            openFilePath = openFileDialogTask_ZDA.FileName;
-
-            string[,] arrayValues = new string[rows, columns];
-            arrayValues = LoadFromFileData(openFilePath);
-
-            dataGridViewBaza_ZDA.ColumnCount = columns;
-            dataGridViewBaza_ZDA.RowCount = rows;
-
-            for (int i = 0; i < columns; i++)
+            try
             {
-                dataGridViewBaza_ZDA.Columns[i].Width = 100;
+                openFileDialogBaza_ZDA.ShowDialog();
+                openFilePath = openFileDialogBaza_ZDA.FileName;
+
+                string[,] arrayValues = new string[rows, columns];
+                arrayValues = LoadFromFileData(openFilePath);
+
+                dataGridViewBaza_ZDA.ColumnCount = columns;
+                dataGridViewBaza_ZDA.RowCount = rows;
+
+                for (int i = 0; i < columns; i++)
+                {
+                    dataGridViewBaza_ZDA.Columns[i].Width = 100;
+                }
+
+                for (int r = 0; r < rows; r++)
+                {
+                    for (int c = 0; c < columns; c++)
+                    {
+                        dataGridViewBaza_ZDA.Rows[r].Cells[c].Value = arrayValues[r, c];
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка", "Что-то пошло не так", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void buttonAdd_ZDA_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewBaza_ZDA.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Выберите одну строку!", "Внимание!");
+                return;
             }
 
-            for (int r = 0; r < rows; r++)
+            int index = dataGridViewBaza_ZDA.SelectedRows[0].Index;
+
+            if (dataGridViewBaza_ZDA.Rows[index].Cells[0].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[1].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[2].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[3].Value == null)
             {
-                for (int c = 0; c < columns; c++)
+                MessageBox.Show("Не все данные введены!", "Внимание!");
+                return;
+            }
+        }
+
+        private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveFileDialogBaza_ZDA.FileName = "OutPutBaza.csv";
+            saveFileDialogBaza_ZDA.InitialDirectory = Directory.GetCurrentDirectory();
+            saveFileDialogBaza_ZDA.ShowDialog();
+
+            string path = saveFileDialogBaza_ZDA.FileName;
+
+            FileInfo fileInfo = new FileInfo(path);
+            bool fileExists = fileInfo.Exists;
+
+            if (fileExists)
+            {
+                File.Delete(path);
+            }
+
+            int rows = dataGridViewBaza_ZDA.RowCount;
+            int columns = dataGridViewBaza_ZDA.ColumnCount;
+
+            string str = "";
+
+            for (int i = 0; i < rows; i++)
+            {
+                for (int j = 0; j < columns; j++)
                 {
-                    dataGridViewBaza_ZDA.Rows[r].Cells[c].Value = arrayValues[r, c];
+                    if (j != columns - 1)
+                    {
+                        str = str + dataGridViewBaza_ZDA.Rows[i].Cells[j].Value + ";";
+                    }
+                    else
+                    {
+                        str = str + dataGridViewBaza_ZDA.Rows[i].Cells[j].Value;
+                    }
                 }
+                File.AppendAllText(path, str + Environment.NewLine);
+                str = "";
             }
         }
     }

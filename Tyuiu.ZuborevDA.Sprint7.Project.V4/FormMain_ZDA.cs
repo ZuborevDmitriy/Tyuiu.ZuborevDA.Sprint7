@@ -116,11 +116,21 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             if (dataGridViewBaza_ZDA.Rows[index].Cells[0].Value == null ||
                 dataGridViewBaza_ZDA.Rows[index].Cells[1].Value == null ||
                 dataGridViewBaza_ZDA.Rows[index].Cells[2].Value == null ||
-                dataGridViewBaza_ZDA.Rows[index].Cells[3].Value == null)
+                dataGridViewBaza_ZDA.Rows[index].Cells[3].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[4].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[5].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[6].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[7].Value == null)
             {
                 MessageBox.Show("Не все данные введены!", "Внимание!");
                 return;
             }
+            else
+            {
+                MessageBox.Show("Данные добавлены!", "Внимание!");
+            }
+
+            dataGridViewBaza_ZDA.Rows[index].ReadOnly = true;
         }
 
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
@@ -160,6 +170,12 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 File.AppendAllText(path, str + Environment.NewLine);
                 str = "";
             }
+            MessageBox.Show("Данные сохранены", "Внимание!");
+        }
+
+        private void buttonRemove_ZDA_Click(object sender, EventArgs e)
+        {
+            dataGridViewBaza_ZDA.Rows.Clear();
         }
     }
 }

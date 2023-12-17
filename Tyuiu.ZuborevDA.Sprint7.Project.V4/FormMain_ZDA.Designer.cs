@@ -210,6 +210,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.buttonRemove_ZDA.TabIndex = 2;
             this.buttonRemove_ZDA.Text = "Удалить";
             this.buttonRemove_ZDA.UseVisualStyleBackColor = true;
+            this.buttonRemove_ZDA.Click += new System.EventHandler(this.buttonRemove_ZDA_Click);
             // 
             // buttonUpdate_ZDA
             // 

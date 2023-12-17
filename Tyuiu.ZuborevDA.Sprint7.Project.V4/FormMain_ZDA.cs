@@ -175,7 +175,44 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
         private void buttonRemove_ZDA_Click(object sender, EventArgs e)
         {
-            dataGridViewBaza_ZDA.Rows.Clear();
+            int index = dataGridViewBaza_ZDA.SelectedRows[0].Index;
+            dataGridViewBaza_ZDA.Rows.RemoveAt(index);
+        }
+
+        private void buttonChange_ZDA_Click(object sender, EventArgs e)
+        {
+            int index = dataGridViewBaza_ZDA.SelectedRows[0].Index;
+            dataGridViewBaza_ZDA.Rows[index].ReadOnly = false;
+        }
+
+        private void buttonSChange_ZDA_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewBaza_ZDA.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Выберите одну строку!", "Внимание!");
+                return;
+            }
+
+            int index = dataGridViewBaza_ZDA.SelectedRows[0].Index;
+
+            if (dataGridViewBaza_ZDA.Rows[index].Cells[0].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[1].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[2].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[3].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[4].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[5].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[6].Value == null ||
+                dataGridViewBaza_ZDA.Rows[index].Cells[7].Value == null)
+            {
+                MessageBox.Show("Не все данные введены!", "Внимание!");
+                return;
+            }
+            else
+            {
+                MessageBox.Show("Данные обновлены!", "Внимание!");
+            }
+
+            dataGridViewBaza_ZDA.Rows[index].ReadOnly = true;
         }
     }
 }

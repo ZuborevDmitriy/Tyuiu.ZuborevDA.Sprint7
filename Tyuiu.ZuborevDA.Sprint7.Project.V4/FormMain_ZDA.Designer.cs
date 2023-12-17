@@ -49,10 +49,11 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.DataGive = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBoxTools_ZDA = new System.Windows.Forms.GroupBox();
             this.buttonRemove_ZDA = new System.Windows.Forms.Button();
-            this.buttonUpdate_ZDA = new System.Windows.Forms.Button();
+            this.buttonChange_ZDA = new System.Windows.Forms.Button();
             this.buttonAdd_ZDA = new System.Windows.Forms.Button();
             this.openFileDialogBaza_ZDA = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogBaza_ZDA = new System.Windows.Forms.SaveFileDialog();
+            this.buttonSChange_ZDA = new System.Windows.Forms.Button();
             this.menuStripUpPanel_ZDA.SuspendLayout();
             this.groupBoxBaza_ZDA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaza_ZDA)).BeginInit();
@@ -192,8 +193,9 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             // groupBoxTools_ZDA
             // 
+            this.groupBoxTools_ZDA.Controls.Add(this.buttonSChange_ZDA);
             this.groupBoxTools_ZDA.Controls.Add(this.buttonRemove_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.buttonUpdate_ZDA);
+            this.groupBoxTools_ZDA.Controls.Add(this.buttonChange_ZDA);
             this.groupBoxTools_ZDA.Controls.Add(this.buttonAdd_ZDA);
             this.groupBoxTools_ZDA.Location = new System.Drawing.Point(675, 216);
             this.groupBoxTools_ZDA.Name = "groupBoxTools_ZDA";
@@ -204,7 +206,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             // buttonRemove_ZDA
             // 
-            this.buttonRemove_ZDA.Location = new System.Drawing.Point(52, 171);
+            this.buttonRemove_ZDA.Location = new System.Drawing.Point(52, 264);
             this.buttonRemove_ZDA.Name = "buttonRemove_ZDA";
             this.buttonRemove_ZDA.Size = new System.Drawing.Size(75, 23);
             this.buttonRemove_ZDA.TabIndex = 2;
@@ -212,20 +214,21 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.buttonRemove_ZDA.UseVisualStyleBackColor = true;
             this.buttonRemove_ZDA.Click += new System.EventHandler(this.buttonRemove_ZDA_Click);
             // 
-            // buttonUpdate_ZDA
+            // buttonChange_ZDA
             // 
-            this.buttonUpdate_ZDA.Location = new System.Drawing.Point(52, 117);
-            this.buttonUpdate_ZDA.Name = "buttonUpdate_ZDA";
-            this.buttonUpdate_ZDA.Size = new System.Drawing.Size(75, 23);
-            this.buttonUpdate_ZDA.TabIndex = 1;
-            this.buttonUpdate_ZDA.Text = "Обновить";
-            this.buttonUpdate_ZDA.UseVisualStyleBackColor = true;
+            this.buttonChange_ZDA.Location = new System.Drawing.Point(52, 117);
+            this.buttonChange_ZDA.Name = "buttonChange_ZDA";
+            this.buttonChange_ZDA.Size = new System.Drawing.Size(161, 23);
+            this.buttonChange_ZDA.TabIndex = 1;
+            this.buttonChange_ZDA.Text = "Изменить строку";
+            this.buttonChange_ZDA.UseVisualStyleBackColor = true;
+            this.buttonChange_ZDA.Click += new System.EventHandler(this.buttonChange_ZDA_Click);
             // 
             // buttonAdd_ZDA
             // 
             this.buttonAdd_ZDA.Location = new System.Drawing.Point(52, 71);
             this.buttonAdd_ZDA.Name = "buttonAdd_ZDA";
-            this.buttonAdd_ZDA.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd_ZDA.Size = new System.Drawing.Size(175, 23);
             this.buttonAdd_ZDA.TabIndex = 0;
             this.buttonAdd_ZDA.Text = "Добавить";
             this.buttonAdd_ZDA.UseVisualStyleBackColor = true;
@@ -234,6 +237,16 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // openFileDialogBaza_ZDA
             // 
             this.openFileDialogBaza_ZDA.Filter = "Exel|*csv";
+            // 
+            // buttonSChange_ZDA
+            // 
+            this.buttonSChange_ZDA.Location = new System.Drawing.Point(52, 155);
+            this.buttonSChange_ZDA.Name = "buttonSChange_ZDA";
+            this.buttonSChange_ZDA.Size = new System.Drawing.Size(161, 23);
+            this.buttonSChange_ZDA.TabIndex = 3;
+            this.buttonSChange_ZDA.Text = "Сохранить изменения";
+            this.buttonSChange_ZDA.UseVisualStyleBackColor = true;
+            this.buttonSChange_ZDA.Click += new System.EventHandler(this.buttonSChange_ZDA_Click);
             // 
             // FormMain_ZDA
             // 
@@ -269,7 +282,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         private System.Windows.Forms.DataGridView dataGridViewBaza_ZDA;
         private System.Windows.Forms.GroupBox groupBoxTools_ZDA;
         private System.Windows.Forms.Button buttonRemove_ZDA;
-        private System.Windows.Forms.Button buttonUpdate_ZDA;
+        private System.Windows.Forms.Button buttonChange_ZDA;
         private System.Windows.Forms.Button buttonAdd_ZDA;
         private System.Windows.Forms.DataGridViewTextBoxColumn BookYear;
         private System.Windows.Forms.DataGridViewTextBoxColumn Author;
@@ -282,6 +295,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         private System.Windows.Forms.OpenFileDialog openFileDialogBaza_ZDA;
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialogBaza_ZDA;
+        private System.Windows.Forms.Button buttonSChange_ZDA;
     }
 }
 

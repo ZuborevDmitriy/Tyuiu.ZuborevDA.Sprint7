@@ -176,6 +176,12 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
         private void buttonRemove_ZDA_Click(object sender, EventArgs e)
         {
+            if (dataGridViewBaza_ZDA.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Выберите одну строку!", "Внимание!");
+                return;
+            }
+
             try
             {
                 foreach (DataGridViewRow row in dataGridViewBaza_ZDA.SelectedRows)

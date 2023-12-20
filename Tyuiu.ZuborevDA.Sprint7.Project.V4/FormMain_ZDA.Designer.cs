@@ -54,6 +54,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.TicketNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataGet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DataGive = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.buttonNewRow_ZDA = new System.Windows.Forms.Button();
             this.menuStripUpPanel_ZDA.SuspendLayout();
             this.groupBoxBaza_ZDA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaza_ZDA)).BeginInit();
@@ -153,6 +154,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             // groupBoxTools_ZDA
             // 
+            this.groupBoxTools_ZDA.Controls.Add(this.buttonNewRow_ZDA);
             this.groupBoxTools_ZDA.Controls.Add(this.buttonSChange_ZDA);
             this.groupBoxTools_ZDA.Controls.Add(this.buttonRemove_ZDA);
             this.groupBoxTools_ZDA.Controls.Add(this.buttonChange_ZDA);
@@ -248,6 +250,16 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.DataGive.HeaderText = "Дата сдачи";
             this.DataGive.Name = "DataGive";
             // 
+            // buttonNewRow_ZDA
+            // 
+            this.buttonNewRow_ZDA.Location = new System.Drawing.Point(78, 29);
+            this.buttonNewRow_ZDA.Name = "buttonNewRow_ZDA";
+            this.buttonNewRow_ZDA.Size = new System.Drawing.Size(173, 23);
+            this.buttonNewRow_ZDA.TabIndex = 4;
+            this.buttonNewRow_ZDA.Text = "Новая строка";
+            this.buttonNewRow_ZDA.UseVisualStyleBackColor = true;
+            this.buttonNewRow_ZDA.Click += new System.EventHandler(this.buttonNewRow_ZDA_Click);
+            // 
             // FormMain_ZDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -296,6 +308,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         private System.Windows.Forms.DataGridViewTextBoxColumn TicketNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGet;
         private System.Windows.Forms.DataGridViewTextBoxColumn DataGive;
+        private System.Windows.Forms.Button buttonNewRow_ZDA;
     }
 }
 

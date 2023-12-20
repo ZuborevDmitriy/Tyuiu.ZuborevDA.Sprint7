@@ -44,7 +44,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         private void справочнаяИнформацияToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormInfo_ZDA formInfo = new FormInfo_ZDA();
-            formInfo.ShowDialog();  
+            formInfo.ShowDialog();
         }
 
         public static string[,] LoadFromFileData(string filePath)
@@ -82,7 +82,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 arrayValues = LoadFromFileData(openFilePath);
 
                 dataGridViewBaza_ZDA.ColumnCount = columns;
-                dataGridViewBaza_ZDA.RowCount = rows;
+                dataGridViewBaza_ZDA.RowCount = rows+1;
 
                 for (int i = 0; i < columns; i++)
                 {
@@ -93,15 +93,8 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 {
                     for (int c = 0; c < columns; c++)
                     {
-                        if (c != 0 && c != 3 && c != 5 && c != 6 && c != 7)
-                        {
-                            dataGridViewBaza_ZDA.Rows[r].Cells[c].Value = arrayValues[r, c];
-                            dataGridViewBaza_ZDA.Rows[r].Cells[c].ReadOnly = true;
-                        }
-                        else
-                        {
-                            dataGridViewBaza_ZDA.Rows[r].Cells[c].Value = arrayValues[r, c];
-                        }
+                        dataGridViewBaza_ZDA.Rows[r].Cells[c].Value = arrayValues[r, c];
+                        dataGridViewBaza_ZDA.Rows[r].Cells[c].ReadOnly = true;
                     }
                 }
             }
@@ -183,8 +176,17 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
         private void buttonRemove_ZDA_Click(object sender, EventArgs e)
         {
-            int index = dataGridViewBaza_ZDA.SelectedRows[0].Index;
-            dataGridViewBaza_ZDA.Rows.RemoveAt(index);
+            try
+            {
+                foreach (DataGridViewRow row in dataGridViewBaza_ZDA.SelectedRows)
+                {
+                    dataGridViewBaza_ZDA.Rows.RemoveAt(row.Index);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Удалить последнюю строку нельзя", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
 
         private void buttonChange_ZDA_Click(object sender, EventArgs e)
@@ -221,6 +223,12 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             }
 
             dataGridViewBaza_ZDA.Rows[index].ReadOnly = true;
+        }
+
+        private void buttonNewRow_ZDA_Click(object sender, EventArgs e)
+        {
+            int rowIndex = dataGridViewBaza_ZDA.Rows.Add();
+            dataGridViewBaza_ZDA.Rows[rowIndex].Cells[0].Value = "";
         }
     }
 }

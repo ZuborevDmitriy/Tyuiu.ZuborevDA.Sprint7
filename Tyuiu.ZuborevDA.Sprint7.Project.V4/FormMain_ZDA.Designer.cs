@@ -54,12 +54,12 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.dataGridViewBaza_ZDA = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.textBoxSearch_ZDA = new System.Windows.Forms.TextBox();
+            this.buttonSearch_ZDA = new System.Windows.Forms.Button();
             this.buttonRemove_ZDA = new System.Windows.Forms.Button();
             this.buttonUpdate_ZDA = new System.Windows.Forms.Button();
             this.buttonClear_ZDA = new System.Windows.Forms.Button();
             this.buttonAdd_ZDA = new System.Windows.Forms.Button();
-            this.buttonSearch_ZDA = new System.Windows.Forms.Button();
-            this.textBoxSearch_ZDA = new System.Windows.Forms.TextBox();
             this.menuStripUpPanel_ZDA.SuspendLayout();
             this.panelUp_ZDA.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -239,6 +239,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             // dataGridViewBaza_ZDA
             // 
+            this.dataGridViewBaza_ZDA.AllowUserToAddRows = false;
             this.dataGridViewBaza_ZDA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBaza_ZDA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBaza_ZDA.Location = new System.Drawing.Point(6, 19);
@@ -270,6 +271,23 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "groupBox3";
             // 
+            // textBoxSearch_ZDA
+            // 
+            this.textBoxSearch_ZDA.Location = new System.Drawing.Point(138, 239);
+            this.textBoxSearch_ZDA.Name = "textBoxSearch_ZDA";
+            this.textBoxSearch_ZDA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSearch_ZDA.TabIndex = 5;
+            // 
+            // buttonSearch_ZDA
+            // 
+            this.buttonSearch_ZDA.Location = new System.Drawing.Point(138, 209);
+            this.buttonSearch_ZDA.Name = "buttonSearch_ZDA";
+            this.buttonSearch_ZDA.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch_ZDA.TabIndex = 4;
+            this.buttonSearch_ZDA.Text = "Поиск элемента";
+            this.buttonSearch_ZDA.UseVisualStyleBackColor = true;
+            this.buttonSearch_ZDA.Click += new System.EventHandler(this.buttonSearch_ZDA_Click);
+            // 
             // buttonRemove_ZDA
             // 
             this.buttonRemove_ZDA.Location = new System.Drawing.Point(138, 118);
@@ -288,7 +306,6 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.buttonUpdate_ZDA.TabIndex = 2;
             this.buttonUpdate_ZDA.Text = "Обновить данные";
             this.buttonUpdate_ZDA.UseVisualStyleBackColor = true;
-            this.buttonUpdate_ZDA.Click += new System.EventHandler(this.buttonUpdate_ZDA_Click);
             // 
             // buttonClear_ZDA
             // 
@@ -309,23 +326,6 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.buttonAdd_ZDA.Text = "Добавить строку";
             this.buttonAdd_ZDA.UseVisualStyleBackColor = true;
             this.buttonAdd_ZDA.Click += new System.EventHandler(this.buttonAdd_ZDA_Click);
-            // 
-            // buttonSearch_ZDA
-            // 
-            this.buttonSearch_ZDA.Location = new System.Drawing.Point(138, 209);
-            this.buttonSearch_ZDA.Name = "buttonSearch_ZDA";
-            this.buttonSearch_ZDA.Size = new System.Drawing.Size(75, 23);
-            this.buttonSearch_ZDA.TabIndex = 4;
-            this.buttonSearch_ZDA.Text = "Поиск элемента";
-            this.buttonSearch_ZDA.UseVisualStyleBackColor = true;
-            this.buttonSearch_ZDA.Click += new System.EventHandler(this.buttonSearch_ZDA_Click);
-            // 
-            // textBoxSearch_ZDA
-            // 
-            this.textBoxSearch_ZDA.Location = new System.Drawing.Point(138, 239);
-            this.textBoxSearch_ZDA.Name = "textBoxSearch_ZDA";
-            this.textBoxSearch_ZDA.Size = new System.Drawing.Size(100, 20);
-            this.textBoxSearch_ZDA.TabIndex = 5;
             // 
             // FormMain_ZDA
             // 

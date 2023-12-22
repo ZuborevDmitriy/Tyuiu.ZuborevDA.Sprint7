@@ -116,16 +116,23 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
         private void dataGridViewBaza_ZDA_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            index = e.RowIndex;
-            DataGridViewRow row = dataGridViewBaza_ZDA.Rows[index];
-            textBoxYear_ZDA.Text = row.Cells[0].Value.ToString();
-            textBoxAuthor_ZDA.Text = row.Cells[1].Value.ToString();
-            textBoxBookName_ZDA.Text = row.Cells[2].Value.ToString();
-            textBoxPrice_ZDA.Text = row.Cells[3].Value.ToString();
-            textBoxFIO_ZDA.Text = row.Cells[4].Value.ToString();
-            textBoxNumberTicket_ZDA.Text = row.Cells[5].Value.ToString();
-            textBoxDataGet_ZDA.Text = row.Cells[6].Value.ToString();
-            textBoxDataGive_ZDA.Text = row.Cells[7].Value.ToString();
+            try
+            {
+                index = e.RowIndex;
+                DataGridViewRow row = dataGridViewBaza_ZDA.Rows[index];
+                textBoxYear_ZDA.Text = row.Cells[0].Value.ToString();
+                textBoxAuthor_ZDA.Text = row.Cells[1].Value.ToString();
+                textBoxBookName_ZDA.Text = row.Cells[2].Value.ToString();
+                textBoxPrice_ZDA.Text = row.Cells[3].Value.ToString();
+                textBoxFIO_ZDA.Text = row.Cells[4].Value.ToString();
+                textBoxNumberTicket_ZDA.Text = row.Cells[5].Value.ToString();
+                textBoxDataGet_ZDA.Text = row.Cells[6].Value.ToString();
+                textBoxDataGive_ZDA.Text = row.Cells[7].Value.ToString();
+            }
+            catch
+            {
+                MessageBox.Show("Область не редактируется!", "Внимание!");
+            }
         }
 
         private void buttonAdd_ZDA_Click(object sender, EventArgs e)
@@ -138,23 +145,29 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                     return;
                 }
             }
-
-            if (textBoxYear_ZDA.Text == "" ||
-                textBoxAuthor_ZDA.Text == "" ||
-                textBoxBookName_ZDA.Text == "" ||
-                textBoxPrice_ZDA.Text == "" ||
-                textBoxFIO_ZDA.Text == "" ||
-                textBoxNumberTicket_ZDA.Text == "" ||
-                textBoxDataGet_ZDA.Text == "" ||
-                textBoxDataGive_ZDA.Text == "")
+            try
             {
-                MessageBox.Show("Не все данные введены!", "Внимание!");
-                return;
+                if (textBoxYear_ZDA.Text == "" ||
+                    textBoxAuthor_ZDA.Text == "" ||
+                    textBoxBookName_ZDA.Text == "" ||
+                    textBoxPrice_ZDA.Text == "" ||
+                    textBoxFIO_ZDA.Text == "" ||
+                    textBoxNumberTicket_ZDA.Text == "" ||
+                    textBoxDataGet_ZDA.Text == "" ||
+                    textBoxDataGive_ZDA.Text == "")
+                {
+                    MessageBox.Show("Не все данные введены!", "Внимание!");
+                    return;
+                }
+                else
+                {
+                    table.Rows.Add(textBoxYear_ZDA.Text, textBoxAuthor_ZDA.Text, textBoxBookName_ZDA.Text, textBoxPrice_ZDA.Text, textBoxFIO_ZDA.Text, textBoxNumberTicket_ZDA.Text, textBoxDataGet_ZDA.Text, textBoxDataGive_ZDA.Text);
+                    MessageBox.Show("Данные добавлены!", "Внимание!");
+                }
             }
-            else
+            catch
             {
-                table.Rows.Add(textBoxYear_ZDA.Text, textBoxAuthor_ZDA.Text, textBoxBookName_ZDA.Text, textBoxPrice_ZDA.Text, textBoxFIO_ZDA.Text, textBoxNumberTicket_ZDA.Text, textBoxDataGet_ZDA.Text, textBoxDataGive_ZDA.Text);
-                MessageBox.Show("Данные добавлены!", "Внимание!");
+                MessageBox.Show("Все хуйня давай по новой!", "Внимание!");
             }
         }
 
@@ -170,28 +183,23 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             textBoxDataGive_ZDA.Text = String.Empty;
         }
 
-        private void buttonUpdate_ZDA_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow newdata = dataGridViewBaza_ZDA.Rows[index];
-            newdata.Cells[0].Value = textBoxYear_ZDA;
-            newdata.Cells[1].Value = textBoxAuthor_ZDA;
-            newdata.Cells[2].Value = textBoxBookName_ZDA;
-            newdata.Cells[3].Value = textBoxPrice_ZDA;
-            newdata.Cells[4].Value = textBoxFIO_ZDA;
-            newdata.Cells[5].Value = textBoxNumberTicket_ZDA;
-            newdata.Cells[6].Value = textBoxDataGet_ZDA;
-            newdata.Cells[7].Value = textBoxDataGive_ZDA;
-        }
-
         private void buttonRemove_ZDA_Click(object sender, EventArgs e)
         {
+            if (dataGridViewBaza_ZDA.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Выберите одну строку!", "Внимание!");
+                return;
+            }
             index = dataGridViewBaza_ZDA.CurrentCell.RowIndex;
             dataGridViewBaza_ZDA.Rows.RemoveAt(index);
         }
 
         private void buttonSearch_ZDA_Click(object sender, EventArgs e)
         {
-            (dataGridViewBaza_ZDA.DataSource as DataTable).DefaultView.RowFilter = String.Format("Год издания like '%" + textBoxSearch_ZDA.Text + "%'");
+            (dataGridViewBaza_ZDA.DataSource as DataTable).DefaultView.RowFilter =
+                String.Format("Автор like '%" + textBoxSearch_ZDA.Text + "%'");
+            (dataGridViewBaza_ZDA.DataSource as DataTable).DefaultView.RowFilter =
+                String.Format("ФИО like '%" + textBoxSearch_ZDA.Text + "%'");
         }
     }
 }

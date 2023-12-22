@@ -37,28 +37,37 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочнаяИнформацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBoxBaza_ZDA = new System.Windows.Forms.GroupBox();
-            this.dataGridViewBaza_ZDA = new System.Windows.Forms.DataGridView();
-            this.groupBoxTools_ZDA = new System.Windows.Forms.GroupBox();
-            this.buttonSChange_ZDA = new System.Windows.Forms.Button();
-            this.buttonRemove_ZDA = new System.Windows.Forms.Button();
-            this.buttonChange_ZDA = new System.Windows.Forms.Button();
-            this.buttonAdd_ZDA = new System.Windows.Forms.Button();
             this.openFileDialogBaza_ZDA = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogBaza_ZDA = new System.Windows.Forms.SaveFileDialog();
-            this.BookYear = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Author = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BookName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Price = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ReaderName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TicketNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DataGive = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.buttonNewRow_ZDA = new System.Windows.Forms.Button();
+            this.panelUp_ZDA = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxDataGive_ZDA = new System.Windows.Forms.TextBox();
+            this.textBoxDataGet_ZDA = new System.Windows.Forms.TextBox();
+            this.textBoxNumberTicket_ZDA = new System.Windows.Forms.TextBox();
+            this.textBoxFIO_ZDA = new System.Windows.Forms.TextBox();
+            this.textBoxPrice_ZDA = new System.Windows.Forms.TextBox();
+            this.textBoxBookName_ZDA = new System.Windows.Forms.TextBox();
+            this.textBoxAuthor_ZDA = new System.Windows.Forms.TextBox();
+            this.textBoxYear_ZDA = new System.Windows.Forms.TextBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.dataGridViewBaza_ZDA = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.buttonRemove_ZDA = new System.Windows.Forms.Button();
+            this.buttonUpdate_ZDA = new System.Windows.Forms.Button();
+            this.buttonClear_ZDA = new System.Windows.Forms.Button();
+            this.buttonAdd_ZDA = new System.Windows.Forms.Button();
+            this.buttonSearch_ZDA = new System.Windows.Forms.Button();
+            this.textBoxSearch_ZDA = new System.Windows.Forms.TextBox();
             this.menuStripUpPanel_ZDA.SuspendLayout();
-            this.groupBoxBaza_ZDA.SuspendLayout();
+            this.panelUp_ZDA.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaza_ZDA)).BeginInit();
-            this.groupBoxTools_ZDA.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStripUpPanel_ZDA
@@ -87,21 +96,21 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.загрузитьToolStripMenuItem.Text = "Загрузить";
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
             // удалитьToolStripMenuItem
             // 
             this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.удалитьToolStripMenuItem.Text = "Удалить";
             // 
             // оПрограммеToolStripMenuItem
@@ -125,157 +134,223 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
-            // groupBoxBaza_ZDA
-            // 
-            this.groupBoxBaza_ZDA.Controls.Add(this.dataGridViewBaza_ZDA);
-            this.groupBoxBaza_ZDA.Location = new System.Drawing.Point(28, 156);
-            this.groupBoxBaza_ZDA.Name = "groupBoxBaza_ZDA";
-            this.groupBoxBaza_ZDA.Size = new System.Drawing.Size(619, 400);
-            this.groupBoxBaza_ZDA.TabIndex = 1;
-            this.groupBoxBaza_ZDA.TabStop = false;
-            this.groupBoxBaza_ZDA.Text = "База данных";
-            // 
-            // dataGridViewBaza_ZDA
-            // 
-            this.dataGridViewBaza_ZDA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBaza_ZDA.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.BookYear,
-            this.Author,
-            this.BookName,
-            this.Price,
-            this.ReaderName,
-            this.TicketNumber,
-            this.DataGet,
-            this.DataGive});
-            this.dataGridViewBaza_ZDA.Location = new System.Drawing.Point(18, 53);
-            this.dataGridViewBaza_ZDA.Name = "dataGridViewBaza_ZDA";
-            this.dataGridViewBaza_ZDA.Size = new System.Drawing.Size(580, 308);
-            this.dataGridViewBaza_ZDA.TabIndex = 0;
-            // 
-            // groupBoxTools_ZDA
-            // 
-            this.groupBoxTools_ZDA.Controls.Add(this.buttonNewRow_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.buttonSChange_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.buttonRemove_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.buttonChange_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.buttonAdd_ZDA);
-            this.groupBoxTools_ZDA.Location = new System.Drawing.Point(675, 216);
-            this.groupBoxTools_ZDA.Name = "groupBoxTools_ZDA";
-            this.groupBoxTools_ZDA.Size = new System.Drawing.Size(323, 458);
-            this.groupBoxTools_ZDA.TabIndex = 2;
-            this.groupBoxTools_ZDA.TabStop = false;
-            this.groupBoxTools_ZDA.Text = "Инструменты";
-            // 
-            // buttonSChange_ZDA
-            // 
-            this.buttonSChange_ZDA.Location = new System.Drawing.Point(52, 155);
-            this.buttonSChange_ZDA.Name = "buttonSChange_ZDA";
-            this.buttonSChange_ZDA.Size = new System.Drawing.Size(161, 23);
-            this.buttonSChange_ZDA.TabIndex = 3;
-            this.buttonSChange_ZDA.Text = "Сохранить изменения";
-            this.buttonSChange_ZDA.UseVisualStyleBackColor = true;
-            this.buttonSChange_ZDA.Click += new System.EventHandler(this.buttonSChange_ZDA_Click);
-            // 
-            // buttonRemove_ZDA
-            // 
-            this.buttonRemove_ZDA.Location = new System.Drawing.Point(88, 368);
-            this.buttonRemove_ZDA.Name = "buttonRemove_ZDA";
-            this.buttonRemove_ZDA.Size = new System.Drawing.Size(75, 23);
-            this.buttonRemove_ZDA.TabIndex = 2;
-            this.buttonRemove_ZDA.Text = "Удалить";
-            this.buttonRemove_ZDA.UseVisualStyleBackColor = true;
-            this.buttonRemove_ZDA.Click += new System.EventHandler(this.buttonRemove_ZDA_Click);
-            // 
-            // buttonChange_ZDA
-            // 
-            this.buttonChange_ZDA.Location = new System.Drawing.Point(52, 117);
-            this.buttonChange_ZDA.Name = "buttonChange_ZDA";
-            this.buttonChange_ZDA.Size = new System.Drawing.Size(161, 23);
-            this.buttonChange_ZDA.TabIndex = 1;
-            this.buttonChange_ZDA.Text = "Изменить строку";
-            this.buttonChange_ZDA.UseVisualStyleBackColor = true;
-            this.buttonChange_ZDA.Click += new System.EventHandler(this.buttonChange_ZDA_Click);
-            // 
-            // buttonAdd_ZDA
-            // 
-            this.buttonAdd_ZDA.Location = new System.Drawing.Point(52, 71);
-            this.buttonAdd_ZDA.Name = "buttonAdd_ZDA";
-            this.buttonAdd_ZDA.Size = new System.Drawing.Size(175, 23);
-            this.buttonAdd_ZDA.TabIndex = 0;
-            this.buttonAdd_ZDA.Text = "Добавить";
-            this.buttonAdd_ZDA.UseVisualStyleBackColor = true;
-            this.buttonAdd_ZDA.Click += new System.EventHandler(this.buttonAdd_ZDA_Click);
-            // 
             // openFileDialogBaza_ZDA
             // 
             this.openFileDialogBaza_ZDA.Filter = "Exel|*csv";
             // 
-            // BookYear
+            // panelUp_ZDA
             // 
-            this.BookYear.HeaderText = "Год издания";
-            this.BookYear.Name = "BookYear";
+            this.panelUp_ZDA.Controls.Add(this.groupBox1);
+            this.panelUp_ZDA.Location = new System.Drawing.Point(37, 52);
+            this.panelUp_ZDA.Name = "panelUp_ZDA";
+            this.panelUp_ZDA.Size = new System.Drawing.Size(1012, 239);
+            this.panelUp_ZDA.TabIndex = 1;
             // 
-            // Author
+            // groupBox1
             // 
-            this.Author.HeaderText = "Автор книги";
-            this.Author.Name = "Author";
+            this.groupBox1.Controls.Add(this.textBoxDataGive_ZDA);
+            this.groupBox1.Controls.Add(this.textBoxDataGet_ZDA);
+            this.groupBox1.Controls.Add(this.textBoxNumberTicket_ZDA);
+            this.groupBox1.Controls.Add(this.textBoxFIO_ZDA);
+            this.groupBox1.Controls.Add(this.textBoxPrice_ZDA);
+            this.groupBox1.Controls.Add(this.textBoxBookName_ZDA);
+            this.groupBox1.Controls.Add(this.textBoxAuthor_ZDA);
+            this.groupBox1.Controls.Add(this.textBoxYear_ZDA);
+            this.groupBox1.Location = new System.Drawing.Point(3, 70);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(941, 150);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
-            // BookName
+            // textBoxDataGive_ZDA
             // 
-            this.BookName.HeaderText = "Название книги";
-            this.BookName.Name = "BookName";
+            this.textBoxDataGive_ZDA.Location = new System.Drawing.Point(752, 87);
+            this.textBoxDataGive_ZDA.Name = "textBoxDataGive_ZDA";
+            this.textBoxDataGive_ZDA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDataGive_ZDA.TabIndex = 7;
             // 
-            // Price
+            // textBoxDataGet_ZDA
             // 
-            this.Price.HeaderText = "Цена, р";
-            this.Price.Name = "Price";
+            this.textBoxDataGet_ZDA.Location = new System.Drawing.Point(645, 87);
+            this.textBoxDataGet_ZDA.Name = "textBoxDataGet_ZDA";
+            this.textBoxDataGet_ZDA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxDataGet_ZDA.TabIndex = 6;
             // 
-            // ReaderName
+            // textBoxNumberTicket_ZDA
             // 
-            this.ReaderName.HeaderText = "ФИО";
-            this.ReaderName.Name = "ReaderName";
+            this.textBoxNumberTicket_ZDA.Location = new System.Drawing.Point(538, 87);
+            this.textBoxNumberTicket_ZDA.Name = "textBoxNumberTicket_ZDA";
+            this.textBoxNumberTicket_ZDA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxNumberTicket_ZDA.TabIndex = 5;
             // 
-            // TicketNumber
+            // textBoxFIO_ZDA
             // 
-            this.TicketNumber.HeaderText = "Номер читательского билета";
-            this.TicketNumber.Name = "TicketNumber";
+            this.textBoxFIO_ZDA.Location = new System.Drawing.Point(431, 87);
+            this.textBoxFIO_ZDA.Name = "textBoxFIO_ZDA";
+            this.textBoxFIO_ZDA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxFIO_ZDA.TabIndex = 4;
             // 
-            // DataGet
+            // textBoxPrice_ZDA
             // 
-            this.DataGet.HeaderText = "Дата выдачи";
-            this.DataGet.Name = "DataGet";
+            this.textBoxPrice_ZDA.Location = new System.Drawing.Point(324, 88);
+            this.textBoxPrice_ZDA.Name = "textBoxPrice_ZDA";
+            this.textBoxPrice_ZDA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPrice_ZDA.TabIndex = 3;
             // 
-            // DataGive
+            // textBoxBookName_ZDA
             // 
-            this.DataGive.HeaderText = "Дата сдачи";
-            this.DataGive.Name = "DataGive";
+            this.textBoxBookName_ZDA.Location = new System.Drawing.Point(218, 88);
+            this.textBoxBookName_ZDA.Name = "textBoxBookName_ZDA";
+            this.textBoxBookName_ZDA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxBookName_ZDA.TabIndex = 2;
             // 
-            // buttonNewRow_ZDA
+            // textBoxAuthor_ZDA
             // 
-            this.buttonNewRow_ZDA.Location = new System.Drawing.Point(78, 29);
-            this.buttonNewRow_ZDA.Name = "buttonNewRow_ZDA";
-            this.buttonNewRow_ZDA.Size = new System.Drawing.Size(173, 23);
-            this.buttonNewRow_ZDA.TabIndex = 4;
-            this.buttonNewRow_ZDA.Text = "Новая строка";
-            this.buttonNewRow_ZDA.UseVisualStyleBackColor = true;
-            this.buttonNewRow_ZDA.Click += new System.EventHandler(this.buttonNewRow_ZDA_Click);
+            this.textBoxAuthor_ZDA.Location = new System.Drawing.Point(112, 88);
+            this.textBoxAuthor_ZDA.Name = "textBoxAuthor_ZDA";
+            this.textBoxAuthor_ZDA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxAuthor_ZDA.TabIndex = 1;
+            // 
+            // textBoxYear_ZDA
+            // 
+            this.textBoxYear_ZDA.Location = new System.Drawing.Point(6, 88);
+            this.textBoxYear_ZDA.Name = "textBoxYear_ZDA";
+            this.textBoxYear_ZDA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxYear_ZDA.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBox2);
+            this.panel1.Location = new System.Drawing.Point(86, 316);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(637, 367);
+            this.panel1.TabIndex = 2;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.dataGridViewBaza_ZDA);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(631, 361);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "groupBox2";
+            // 
+            // dataGridViewBaza_ZDA
+            // 
+            this.dataGridViewBaza_ZDA.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewBaza_ZDA.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewBaza_ZDA.Location = new System.Drawing.Point(6, 19);
+            this.dataGridViewBaza_ZDA.Name = "dataGridViewBaza_ZDA";
+            this.dataGridViewBaza_ZDA.Size = new System.Drawing.Size(619, 336);
+            this.dataGridViewBaza_ZDA.TabIndex = 0;
+            this.dataGridViewBaza_ZDA.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBaza_ZDA_CellClick);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.groupBox3);
+            this.panel2.Location = new System.Drawing.Point(744, 316);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(360, 367);
+            this.panel2.TabIndex = 3;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.textBoxSearch_ZDA);
+            this.groupBox3.Controls.Add(this.buttonSearch_ZDA);
+            this.groupBox3.Controls.Add(this.buttonRemove_ZDA);
+            this.groupBox3.Controls.Add(this.buttonUpdate_ZDA);
+            this.groupBox3.Controls.Add(this.buttonClear_ZDA);
+            this.groupBox3.Controls.Add(this.buttonAdd_ZDA);
+            this.groupBox3.Location = new System.Drawing.Point(4, 4);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(353, 360);
+            this.groupBox3.TabIndex = 0;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "groupBox3";
+            // 
+            // buttonRemove_ZDA
+            // 
+            this.buttonRemove_ZDA.Location = new System.Drawing.Point(138, 118);
+            this.buttonRemove_ZDA.Name = "buttonRemove_ZDA";
+            this.buttonRemove_ZDA.Size = new System.Drawing.Size(184, 23);
+            this.buttonRemove_ZDA.TabIndex = 3;
+            this.buttonRemove_ZDA.Text = "Удалить строку";
+            this.buttonRemove_ZDA.UseVisualStyleBackColor = true;
+            this.buttonRemove_ZDA.Click += new System.EventHandler(this.buttonRemove_ZDA_Click);
+            // 
+            // buttonUpdate_ZDA
+            // 
+            this.buttonUpdate_ZDA.Location = new System.Drawing.Point(129, 89);
+            this.buttonUpdate_ZDA.Name = "buttonUpdate_ZDA";
+            this.buttonUpdate_ZDA.Size = new System.Drawing.Size(184, 23);
+            this.buttonUpdate_ZDA.TabIndex = 2;
+            this.buttonUpdate_ZDA.Text = "Обновить данные";
+            this.buttonUpdate_ZDA.UseVisualStyleBackColor = true;
+            this.buttonUpdate_ZDA.Click += new System.EventHandler(this.buttonUpdate_ZDA_Click);
+            // 
+            // buttonClear_ZDA
+            // 
+            this.buttonClear_ZDA.Location = new System.Drawing.Point(138, 60);
+            this.buttonClear_ZDA.Name = "buttonClear_ZDA";
+            this.buttonClear_ZDA.Size = new System.Drawing.Size(172, 23);
+            this.buttonClear_ZDA.TabIndex = 1;
+            this.buttonClear_ZDA.Text = "Отчистить строку";
+            this.buttonClear_ZDA.UseVisualStyleBackColor = true;
+            this.buttonClear_ZDA.Click += new System.EventHandler(this.buttonClear_ZDA_Click);
+            // 
+            // buttonAdd_ZDA
+            // 
+            this.buttonAdd_ZDA.Location = new System.Drawing.Point(129, 19);
+            this.buttonAdd_ZDA.Name = "buttonAdd_ZDA";
+            this.buttonAdd_ZDA.Size = new System.Drawing.Size(172, 23);
+            this.buttonAdd_ZDA.TabIndex = 0;
+            this.buttonAdd_ZDA.Text = "Добавить строку";
+            this.buttonAdd_ZDA.UseVisualStyleBackColor = true;
+            this.buttonAdd_ZDA.Click += new System.EventHandler(this.buttonAdd_ZDA_Click);
+            // 
+            // buttonSearch_ZDA
+            // 
+            this.buttonSearch_ZDA.Location = new System.Drawing.Point(138, 209);
+            this.buttonSearch_ZDA.Name = "buttonSearch_ZDA";
+            this.buttonSearch_ZDA.Size = new System.Drawing.Size(75, 23);
+            this.buttonSearch_ZDA.TabIndex = 4;
+            this.buttonSearch_ZDA.Text = "Поиск элемента";
+            this.buttonSearch_ZDA.UseVisualStyleBackColor = true;
+            this.buttonSearch_ZDA.Click += new System.EventHandler(this.buttonSearch_ZDA_Click);
+            // 
+            // textBoxSearch_ZDA
+            // 
+            this.textBoxSearch_ZDA.Location = new System.Drawing.Point(138, 239);
+            this.textBoxSearch_ZDA.Name = "textBoxSearch_ZDA";
+            this.textBoxSearch_ZDA.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSearch_ZDA.TabIndex = 5;
             // 
             // FormMain_ZDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1116, 713);
-            this.Controls.Add(this.groupBoxTools_ZDA);
-            this.Controls.Add(this.groupBoxBaza_ZDA);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.panelUp_ZDA);
             this.Controls.Add(this.menuStripUpPanel_ZDA);
             this.MainMenuStrip = this.menuStripUpPanel_ZDA;
             this.Name = "FormMain_ZDA";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.FormMain_ZDA_Load);
             this.menuStripUpPanel_ZDA.ResumeLayout(false);
             this.menuStripUpPanel_ZDA.PerformLayout();
-            this.groupBoxBaza_ZDA.ResumeLayout(false);
+            this.panelUp_ZDA.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaza_ZDA)).EndInit();
-            this.groupBoxTools_ZDA.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -290,25 +365,30 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справочнаяИнформацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
-        private System.Windows.Forms.GroupBox groupBoxBaza_ZDA;
-        private System.Windows.Forms.DataGridView dataGridViewBaza_ZDA;
-        private System.Windows.Forms.GroupBox groupBoxTools_ZDA;
-        private System.Windows.Forms.Button buttonRemove_ZDA;
-        private System.Windows.Forms.Button buttonChange_ZDA;
-        private System.Windows.Forms.Button buttonAdd_ZDA;
         private System.Windows.Forms.OpenFileDialog openFileDialogBaza_ZDA;
         private System.Windows.Forms.ToolStripMenuItem сохранитьToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog saveFileDialogBaza_ZDA;
-        private System.Windows.Forms.Button buttonSChange_ZDA;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookYear;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Author;
-        private System.Windows.Forms.DataGridViewTextBoxColumn BookName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Price;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ReaderName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TicketNumber;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataGet;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DataGive;
-        private System.Windows.Forms.Button buttonNewRow_ZDA;
+        private System.Windows.Forms.Panel panelUp_ZDA;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBoxDataGive_ZDA;
+        private System.Windows.Forms.TextBox textBoxDataGet_ZDA;
+        private System.Windows.Forms.TextBox textBoxNumberTicket_ZDA;
+        private System.Windows.Forms.TextBox textBoxFIO_ZDA;
+        private System.Windows.Forms.TextBox textBoxPrice_ZDA;
+        private System.Windows.Forms.TextBox textBoxBookName_ZDA;
+        private System.Windows.Forms.TextBox textBoxAuthor_ZDA;
+        private System.Windows.Forms.TextBox textBoxYear_ZDA;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView dataGridViewBaza_ZDA;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Button buttonAdd_ZDA;
+        private System.Windows.Forms.Button buttonUpdate_ZDA;
+        private System.Windows.Forms.Button buttonClear_ZDA;
+        private System.Windows.Forms.Button buttonRemove_ZDA;
+        private System.Windows.Forms.TextBox textBoxSearch_ZDA;
+        private System.Windows.Forms.Button buttonSearch_ZDA;
     }
 }
 

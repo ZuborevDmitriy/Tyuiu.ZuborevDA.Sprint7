@@ -50,6 +50,20 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             formInfo.ShowDialog();
         }
 
+        private void FormMain_ZDA_Load(object sender, EventArgs e)
+        {
+            table.Columns.Add("Год издания", typeof(int));
+            table.Columns.Add("Автор", typeof(string));
+            table.Columns.Add("Название", typeof(string));
+            table.Columns.Add("Цена р.", typeof(int));
+            table.Columns.Add("ФИО", typeof(string));
+            table.Columns.Add("Номер чит.билета", typeof(string));
+            table.Columns.Add("Дата выдачи", typeof(string));
+            table.Columns.Add("Дата сдачи", typeof(string));
+            data.Tables.Add(table);
+            dataGridViewBaza_ZDA.DataSource = data.Tables["LBaza"];
+        }
+
         private void загрузитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -124,20 +138,6 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 str = "";
             }
             MessageBox.Show("Данные сохранены", "Внимание!");
-        }
-
-        private void FormMain_ZDA_Load(object sender, EventArgs e)
-        {
-            table.Columns.Add("Год издания", typeof(int));
-            table.Columns.Add("Автор", typeof(string));
-            table.Columns.Add("Название", typeof(string));
-            table.Columns.Add("Цена р.", typeof(int));
-            table.Columns.Add("ФИО", typeof(string));
-            table.Columns.Add("Номер чит.билета", typeof(string));
-            table.Columns.Add("Дата выдачи", typeof(string));
-            table.Columns.Add("Дата сдачи", typeof(string));
-
-            dataGridViewBaza_ZDA.DataSource = table;
         }
 
         private void dataGridViewBaza_ZDA_CellClick(object sender, DataGridViewCellEventArgs e)

@@ -211,6 +211,8 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
         private void buttonSearch_ZDA_Click(object sender, EventArgs e)
         {
+            DataView author = table.DefaultView;
+            author.RowFilter = $"Автор Like '%{textBoxSearch_ZDA.Text}%'";
         }
 
         private void buttonUpdate_ZDA_Click(object sender, EventArgs e)

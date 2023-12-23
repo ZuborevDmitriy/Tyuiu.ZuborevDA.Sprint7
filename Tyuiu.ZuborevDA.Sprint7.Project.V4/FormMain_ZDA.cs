@@ -16,9 +16,10 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 {
     public partial class FormMain_ZDA : Form
     {
-        DataTable table = new DataTable("Baza");
         string tableName = "Baza";
         DataSet dataSet = new DataSet();
+
+        DataTable table = new DataTable("Baza");
         int index;
 
         public FormMain_ZDA()
@@ -57,8 +58,6 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 openFileDialogBaza_ZDA.ShowDialog();
                 openFilePath = openFileDialogBaza_ZDA.FileName;
 
-                string delimetr = ";";
-
                 StreamReader sr = new StreamReader(openFilePath, Encoding.Default);
 
                 dataSet.Tables.Add(tableName);
@@ -76,7 +75,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
                 foreach (string r in rows)
                 {
-                    string[] items = r.Split(delimetr.ToCharArray());
+                    string[] items = r.Split(";".ToCharArray());
                     dataSet.Tables[tableName].Rows.Add(items);
                 }
                 this.dataGridViewBaza_ZDA.DataSource = dataSet.Tables[0].DefaultView;
@@ -189,7 +188,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 }
                 else
                 {
-                    dataSet.Tables[tableName].Rows.Add(textBoxYear_ZDA.Text, textBoxAuthor_ZDA.Text, textBoxBookName_ZDA.Text, textBoxPrice_ZDA.Text, textBoxFIO_ZDA.Text, textBoxNumberTicket_ZDA.Text, textBoxDataGet_ZDA.Text, textBoxDataGive_ZDA.Text);
+                    table.Rows.Add(textBoxYear_ZDA.Text, textBoxAuthor_ZDA.Text, textBoxBookName_ZDA.Text, textBoxPrice_ZDA.Text, textBoxFIO_ZDA.Text, textBoxNumberTicket_ZDA.Text, textBoxDataGet_ZDA.Text, textBoxDataGive_ZDA.Text);
                     MessageBox.Show("Данные добавлены!", "Внимание!");
                 }
             }

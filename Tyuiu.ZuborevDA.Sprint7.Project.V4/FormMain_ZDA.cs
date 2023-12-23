@@ -129,14 +129,14 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
         private void FormMain_ZDA_Load(object sender, EventArgs e)
         {
-            table.Columns.Add("Год издания", Type.GetType("System.Int32"));
-            table.Columns.Add("Автор", Type.GetType("System.String"));
-            table.Columns.Add("Название", Type.GetType("System.String"));
-            table.Columns.Add("Цена р.", Type.GetType("System.Int32"));
-            table.Columns.Add("ФИО", Type.GetType("System.String"));
-            table.Columns.Add("Номер чит.билета", Type.GetType("System.String"));
-            table.Columns.Add("Дата выдачи", Type.GetType("System.String"));
-            table.Columns.Add("Дата сдачи", Type.GetType("System.String"));
+            table.Columns.Add("Год издания", typeof(int));
+            table.Columns.Add("Автор", typeof(string));
+            table.Columns.Add("Название", typeof(string));
+            table.Columns.Add("Цена р.", typeof(int));
+            table.Columns.Add("ФИО", typeof(string));
+            table.Columns.Add("Номер чит.билета", typeof(string));
+            table.Columns.Add("Дата выдачи", typeof(string));
+            table.Columns.Add("Дата сдачи", typeof(string));
 
             dataGridViewBaza_ZDA.DataSource = table;
         }

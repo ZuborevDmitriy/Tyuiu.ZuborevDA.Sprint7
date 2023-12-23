@@ -59,6 +59,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 string tableName = "Baza";
 
                 DataSet dataSet = new DataSet();
+
                 StreamReader sr = new StreamReader(openFilePath, Encoding.Default);
 
                 dataSet.Tables.Add(tableName);

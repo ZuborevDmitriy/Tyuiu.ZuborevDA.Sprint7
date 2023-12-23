@@ -27,10 +27,6 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             saveFileDialogBaza_ZDA.Filter = "Значения, разделенные запятыми(*.csv)|*.csv|Все файлы(*.*)|*.*";
         }
 
-        static int rows;
-        static int columns;
-        static string openFilePath;
-
         DataService ds = new DataService();
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -167,7 +163,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             }
             catch
             {
-                MessageBox.Show("Все хуйня давай по новой!", "Внимание!");
+                MessageBox.Show("Неверный формат ввода!", "Внимание!");
             }
         }
 
@@ -200,6 +196,41 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 String.Format("Автор like '%" + textBoxSearch_ZDA.Text + "%'");
             (dataGridViewBaza_ZDA.DataSource as DataTable).DefaultView.RowFilter =
                 String.Format("ФИО like '%" + textBoxSearch_ZDA.Text + "%'");
+        }
+
+        private void buttonUpdate_ZDA_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewBaza_ZDA.SelectedRows.Count != 1)
+            {
+                MessageBox.Show("Выберите одну строку!", "Внимание!");
+                return;
+            }
+            if (textBoxYear_ZDA.Text == "" ||
+                   textBoxAuthor_ZDA.Text == "" ||
+                   textBoxBookName_ZDA.Text == "" ||
+                   textBoxPrice_ZDA.Text == "" ||
+                   textBoxFIO_ZDA.Text == "" ||
+                   textBoxNumberTicket_ZDA.Text == "" ||
+                   textBoxDataGet_ZDA.Text == "" ||
+                   textBoxDataGive_ZDA.Text == "")
+            {
+                MessageBox.Show("Не все данные введены!", "Внимание!");
+                return;
+            }
+            else
+            {
+                DataGridViewRow newdata = dataGridViewBaza_ZDA.Rows[index];
+                newdata.Cells[0].Value = textBoxYear_ZDA.Text;
+                newdata.Cells[1].Value = textBoxAuthor_ZDA.Text;
+                newdata.Cells[2].Value = textBoxBookName_ZDA.Text;
+                newdata.Cells[3].Value = textBoxPrice_ZDA.Text;
+                newdata.Cells[4].Value = textBoxFIO_ZDA.Text;
+                newdata.Cells[5].Value = textBoxNumberTicket_ZDA.Text;
+                newdata.Cells[6].Value = textBoxDataGet_ZDA.Text;
+                newdata.Cells[7].Value = textBoxDataGive_ZDA.Text;
+                MessageBox.Show("Данные добавлены!", "Внимание!");
+            }
+
         }
     }
 }

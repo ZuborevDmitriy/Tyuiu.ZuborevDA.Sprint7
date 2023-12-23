@@ -306,6 +306,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.buttonUpdate_ZDA.TabIndex = 2;
             this.buttonUpdate_ZDA.Text = "Обновить данные";
             this.buttonUpdate_ZDA.UseVisualStyleBackColor = true;
+            this.buttonUpdate_ZDA.Click += new System.EventHandler(this.buttonUpdate_ZDA_Click);
             // 
             // buttonClear_ZDA
             // 

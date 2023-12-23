@@ -16,10 +16,9 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 {
     public partial class FormMain_ZDA : Form
     {
+        DataSet data = new DataSet("HBaza");
+        DataTable table = new DataTable("LBaza");
         string tableName = "Baza";
-        DataSet dataSet = new DataSet();
-
-        DataTable table = new DataTable("Baza");
         int index;
 
         public FormMain_ZDA()
@@ -60,15 +59,15 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
                 StreamReader sr = new StreamReader(openFilePath, Encoding.Default);
 
-                dataSet.Tables.Add(tableName);
-                dataSet.Tables[tableName].Columns.Add("Год издания");
-                dataSet.Tables[tableName].Columns.Add("Автор");
-                dataSet.Tables[tableName].Columns.Add("Название");
-                dataSet.Tables[tableName].Columns.Add("Цена р.");
-                dataSet.Tables[tableName].Columns.Add("ФИО");
-                dataSet.Tables[tableName].Columns.Add("Номер чит.билета");
-                dataSet.Tables[tableName].Columns.Add("Дата выдачи");
-                dataSet.Tables[tableName].Columns.Add("Дата сдачи");
+                data.Tables.Add(tableName);
+                data.Tables[tableName].Columns.Add("Год издания");
+                data.Tables[tableName].Columns.Add("Автор");
+                data.Tables[tableName].Columns.Add("Название");
+                data.Tables[tableName].Columns.Add("Цена р.");
+                data.Tables[tableName].Columns.Add("ФИО");
+                data.Tables[tableName].Columns.Add("Номер чит.билета");
+                data.Tables[tableName].Columns.Add("Дата выдачи");
+                data.Tables[tableName].Columns.Add("Дата сдачи");
 
                 string allData = sr.ReadToEnd();
                 string[] rows = allData.Split("\r".ToCharArray());
@@ -76,9 +75,9 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 foreach (string r in rows)
                 {
                     string[] items = r.Split(";".ToCharArray());
-                    dataSet.Tables[tableName].Rows.Add(items);
+                    data.Tables[tableName].Rows.Add(items);
                 }
-                this.dataGridViewBaza_ZDA.DataSource = dataSet.Tables[0].DefaultView;
+                this.dataGridViewBaza_ZDA.DataSource = data.Tables[0].DefaultView;
 
             }
             catch

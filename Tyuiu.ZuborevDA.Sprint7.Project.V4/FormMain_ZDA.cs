@@ -17,6 +17,8 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
     public partial class FormMain_ZDA : Form
     {
         DataTable table = new DataTable("Baza");
+        string tableName = "Baza";
+        DataSet dataSet = new DataSet();
         int index;
 
         public FormMain_ZDA()
@@ -56,9 +58,6 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 openFilePath = openFileDialogBaza_ZDA.FileName;
 
                 string delimetr = ";";
-                string tableName = "Baza";
-
-                DataSet dataSet = new DataSet();
 
                 StreamReader sr = new StreamReader(openFilePath, Encoding.Default);
 
@@ -190,7 +189,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 }
                 else
                 {
-                    table.Rows.Add(textBoxYear_ZDA.Text, textBoxAuthor_ZDA.Text, textBoxBookName_ZDA.Text, textBoxPrice_ZDA.Text, textBoxFIO_ZDA.Text, textBoxNumberTicket_ZDA.Text, textBoxDataGet_ZDA.Text, textBoxDataGive_ZDA.Text);
+                    dataSet.Tables[tableName].Rows.Add(textBoxYear_ZDA.Text, textBoxAuthor_ZDA.Text, textBoxBookName_ZDA.Text, textBoxPrice_ZDA.Text, textBoxFIO_ZDA.Text, textBoxNumberTicket_ZDA.Text, textBoxDataGet_ZDA.Text, textBoxDataGive_ZDA.Text);
                     MessageBox.Show("Данные добавлены!", "Внимание!");
                 }
             }

@@ -27,6 +27,8 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             saveFileDialogBaza_ZDA.Filter = "Значения, разделенные запятыми(*.csv)|*.csv|Все файлы(*.*)|*.*";
         }
 
+        static string openFilePath;
+
         DataService ds = new DataService();
 
         private void выходToolStripMenuItem_Click(object sender, EventArgs e)
@@ -49,7 +51,37 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         private void загрузитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
-            {}
+            {
+                openFileDialogBaza_ZDA.ShowDialog();
+                openFilePath = openFileDialogBaza_ZDA.FileName;
+
+                string delimetr = ";";
+                string tableName = "Baza";
+
+                DataSet dataSet = new DataSet();
+                StreamReader sr = new StreamReader(openFilePath, Encoding.Default);
+
+                dataSet.Tables.Add(tableName);
+                dataSet.Tables[tableName].Columns.Add("Год издания");
+                dataSet.Tables[tableName].Columns.Add("Автор");
+                dataSet.Tables[tableName].Columns.Add("Название");
+                dataSet.Tables[tableName].Columns.Add("Цена р.");
+                dataSet.Tables[tableName].Columns.Add("ФИО");
+                dataSet.Tables[tableName].Columns.Add("Номер чит.билета");
+                dataSet.Tables[tableName].Columns.Add("Дата выдачи");
+                dataSet.Tables[tableName].Columns.Add("Дата сдачи");
+
+                string allData = sr.ReadToEnd();
+                string[] rows = allData.Split("\r".ToCharArray());
+
+                foreach (string r in rows)
+                {
+                    string[] items = r.Split(delimetr.ToCharArray());
+                    dataSet.Tables[tableName].Rows.Add(items);
+                }
+                this.dataGridViewBaza_ZDA.DataSource = dataSet.Tables[0].DefaultView;
+
+            }
             catch
             {
                 MessageBox.Show("Ошибка", "Что-то пошло не так", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -103,7 +135,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             table.Columns.Add("Название", Type.GetType("System.String"));
             table.Columns.Add("Цена р.", Type.GetType("System.Int32"));
             table.Columns.Add("ФИО", Type.GetType("System.String"));
-            table.Columns.Add("Номер чит.билета", Type.GetType("System.Int32"));
+            table.Columns.Add("Номер чит.билета", Type.GetType("System.String"));
             table.Columns.Add("Дата выдачи", Type.GetType("System.String"));
             table.Columns.Add("Дата сдачи", Type.GetType("System.String"));
 

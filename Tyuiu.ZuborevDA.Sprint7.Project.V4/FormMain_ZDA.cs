@@ -91,42 +91,49 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
         private void сохранитьToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            saveFileDialogBaza_ZDA.FileName = "OutPutBaza.csv";
-            saveFileDialogBaza_ZDA.InitialDirectory = Directory.GetCurrentDirectory();
-            saveFileDialogBaza_ZDA.ShowDialog();
-
-            string path = saveFileDialogBaza_ZDA.FileName;
-
-            FileInfo fileInfo = new FileInfo(path);
-            bool fileExists = fileInfo.Exists;
-
-            if (fileExists)
+            try
             {
-                File.Delete(path);
-            }
+                saveFileDialogBaza_ZDA.FileName = "OutPutBaza.csv";
+                saveFileDialogBaza_ZDA.InitialDirectory = Directory.GetCurrentDirectory();
+                saveFileDialogBaza_ZDA.ShowDialog();
 
-            int rows = dataGridViewBaza_ZDA.RowCount;
-            int columns = dataGridViewBaza_ZDA.ColumnCount;
+                string path = saveFileDialogBaza_ZDA.FileName;
 
-            string str = "";
+                FileInfo fileInfo = new FileInfo(path);
+                bool fileExists = fileInfo.Exists;
 
-            for (int i = 0; i < rows; i++)
-            {
-                for (int j = 0; j < columns; j++)
+                if (fileExists)
                 {
-                    if (j != columns - 1)
-                    {
-                        str = str + dataGridViewBaza_ZDA.Rows[i].Cells[j].Value + ";";
-                    }
-                    else
-                    {
-                        str = str + dataGridViewBaza_ZDA.Rows[i].Cells[j].Value;
-                    }
+                    File.Delete(path);
                 }
-                File.AppendAllText(path, str + Environment.NewLine);
-                str = "";
+
+                int rows = dataGridViewBaza_ZDA.RowCount;
+                int columns = dataGridViewBaza_ZDA.ColumnCount;
+
+                string str = "";
+
+                for (int i = 0; i < rows; i++)
+                {
+                    for (int j = 0; j < columns; j++)
+                    {
+                        if (j != columns - 1)
+                        {
+                            str = str + dataGridViewBaza_ZDA.Rows[i].Cells[j].Value + ";";
+                        }
+                        else
+                        {
+                            str = str + dataGridViewBaza_ZDA.Rows[i].Cells[j].Value;
+                        }
+                    }
+                    File.AppendAllText(path, str + Environment.NewLine);
+                    str = "";
+                }
+                MessageBox.Show("Данные сохранены", "Внимание!");
             }
-            MessageBox.Show("Данные сохранены", "Внимание!");
+            catch
+            {
+                MessageBox.Show("Ошибка при сохраниении", "Внимание!");
+            }
         }
 
         private void dataGridViewBaza_ZDA_CellClick(object sender, DataGridViewCellEventArgs e)

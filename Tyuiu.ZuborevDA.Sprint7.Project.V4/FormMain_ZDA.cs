@@ -18,7 +18,6 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
     {
         DataSet data = new DataSet("HBaza");
         DataTable table = new DataTable("LBaza");
-        string tableName = "Baza";
         int index;
 
         public FormMain_ZDA()
@@ -52,14 +51,14 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
         private void FormMain_ZDA_Load(object sender, EventArgs e)
         {
-            table.Columns.Add("Год издания", typeof(int));
+            table.Columns.Add("Год_издания", typeof(int));
             table.Columns.Add("Автор", typeof(string));
             table.Columns.Add("Название", typeof(string));
-            table.Columns.Add("Цена р.", typeof(int));
+            table.Columns.Add("Цена_р.", typeof(int));
             table.Columns.Add("ФИО", typeof(string));
-            table.Columns.Add("Номер чит.билета", typeof(string));
-            table.Columns.Add("Дата выдачи", typeof(string));
-            table.Columns.Add("Дата сдачи", typeof(string));
+            table.Columns.Add("Номер_чит.билета", typeof(string));
+            table.Columns.Add("Дата_выдачи", typeof(string));
+            table.Columns.Add("Дата_сдачи", typeof(string));
             data.Tables.Add(table);
             dataGridViewBaza_ZDA.DataSource = data.Tables["LBaza"];
         }
@@ -212,10 +211,6 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
         private void buttonSearch_ZDA_Click(object sender, EventArgs e)
         {
-            (dataGridViewBaza_ZDA.DataSource as DataTable).DefaultView.RowFilter =
-                String.Format("Автор like '%" + textBoxSearch_ZDA.Text + "%'");
-            (dataGridViewBaza_ZDA.DataSource as DataTable).DefaultView.RowFilter =
-                String.Format("ФИО like '%" + textBoxSearch_ZDA.Text + "%'");
         }
 
         private void buttonUpdate_ZDA_Click(object sender, EventArgs e)

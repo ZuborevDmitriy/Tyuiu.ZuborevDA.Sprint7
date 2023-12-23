@@ -73,25 +73,15 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
 
                 StreamReader sr = new StreamReader(openFilePath, Encoding.Default);
 
-                data.Tables.Add(tableName);
-                data.Tables[tableName].Columns.Add("Год издания");
-                data.Tables[tableName].Columns.Add("Автор");
-                data.Tables[tableName].Columns.Add("Название");
-                data.Tables[tableName].Columns.Add("Цена р.");
-                data.Tables[tableName].Columns.Add("ФИО");
-                data.Tables[tableName].Columns.Add("Номер чит.билета");
-                data.Tables[tableName].Columns.Add("Дата выдачи");
-                data.Tables[tableName].Columns.Add("Дата сдачи");
-
                 string allData = sr.ReadToEnd();
                 string[] rows = allData.Split("\r".ToCharArray());
 
                 foreach (string r in rows)
                 {
                     string[] items = r.Split(";".ToCharArray());
-                    data.Tables[tableName].Rows.Add(items);
+                    data.Tables["LBaza"].Rows.Add(items);
                 }
-                this.dataGridViewBaza_ZDA.DataSource = data.Tables[0].DefaultView;
+                this.dataGridViewBaza_ZDA.DataSource = data.Tables["LBaza"].DefaultView;
 
             }
             catch

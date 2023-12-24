@@ -29,9 +29,9 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStripUpPanel_ZDA = new System.Windows.Forms.MenuStrip();
             this.действияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -43,7 +43,30 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.openFileDialogBaza_ZDA = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogBaza_ZDA = new System.Windows.Forms.SaveFileDialog();
             this.panelUp_ZDA = new System.Windows.Forms.Panel();
+            this.groupBoxOutPut_ZDA = new System.Windows.Forms.GroupBox();
+            this.labelMin_ZDA = new System.Windows.Forms.Label();
+            this.buttonMin_ZDA = new System.Windows.Forms.Button();
+            this.textBoxMin_ZDA = new System.Windows.Forms.TextBox();
+            this.groupBoxTools_ZDA = new System.Windows.Forms.GroupBox();
+            this.radioButtonDiag_ZDA = new System.Windows.Forms.RadioButton();
+            this.textBoxSearch_ZDA = new System.Windows.Forms.TextBox();
+            this.radioButtonGist_ZDA = new System.Windows.Forms.RadioButton();
+            this.radioButtonFunct_ZDA = new System.Windows.Forms.RadioButton();
+            this.buttonSearch_ZDA = new System.Windows.Forms.Button();
+            this.buttonRemove_ZDA = new System.Windows.Forms.Button();
+            this.buttonGraphic_ZDA = new System.Windows.Forms.Button();
+            this.buttonUpdate_ZDA = new System.Windows.Forms.Button();
+            this.buttonClear_ZDA = new System.Windows.Forms.Button();
+            this.buttonAdd_ZDA = new System.Windows.Forms.Button();
             this.groupBoxInPutData_ZDA = new System.Windows.Forms.GroupBox();
+            this.labelDataGive_ZDA = new System.Windows.Forms.Label();
+            this.labelDataGet_ZDA = new System.Windows.Forms.Label();
+            this.labelTicketNumber_ZDA = new System.Windows.Forms.Label();
+            this.labelFIO_ZDA = new System.Windows.Forms.Label();
+            this.labelPrice_ZDA = new System.Windows.Forms.Label();
+            this.labelBookName_ZDA = new System.Windows.Forms.Label();
+            this.labelAuthor_ZDA = new System.Windows.Forms.Label();
+            this.labelYear_ZDA = new System.Windows.Forms.Label();
             this.textBoxDataGive_ZDA = new System.Windows.Forms.TextBox();
             this.textBoxDataGet_ZDA = new System.Windows.Forms.TextBox();
             this.textBoxNumberTicket_ZDA = new System.Windows.Forms.TextBox();
@@ -55,36 +78,21 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.panelLeft_ZDA = new System.Windows.Forms.Panel();
             this.groupBoxBaza_ZDA = new System.Windows.Forms.GroupBox();
             this.dataGridViewBaza_ZDA = new System.Windows.Forms.DataGridView();
-            this.groupBoxTools_ZDA = new System.Windows.Forms.GroupBox();
-            this.textBoxSearch_ZDA = new System.Windows.Forms.TextBox();
-            this.buttonSearch_ZDA = new System.Windows.Forms.Button();
-            this.buttonRemove_ZDA = new System.Windows.Forms.Button();
-            this.buttonUpdate_ZDA = new System.Windows.Forms.Button();
-            this.buttonClear_ZDA = new System.Windows.Forms.Button();
-            this.buttonAdd_ZDA = new System.Windows.Forms.Button();
-            this.buttonGraphic_ZDA = new System.Windows.Forms.Button();
-            this.radioButtonGist_ZDA = new System.Windows.Forms.RadioButton();
-            this.radioButtonFunct_ZDA = new System.Windows.Forms.RadioButton();
-            this.radioButtonDiag_ZDA = new System.Windows.Forms.RadioButton();
-            this.labelYear_ZDA = new System.Windows.Forms.Label();
-            this.labelAuthor_ZDA = new System.Windows.Forms.Label();
-            this.labelBookName_ZDA = new System.Windows.Forms.Label();
-            this.labelPrice_ZDA = new System.Windows.Forms.Label();
-            this.labelFIO_ZDA = new System.Windows.Forms.Label();
-            this.labelTicketNumber_ZDA = new System.Windows.Forms.Label();
-            this.labelDataGet_ZDA = new System.Windows.Forms.Label();
-            this.labelDataGive_ZDA = new System.Windows.Forms.Label();
             this.panelRight_ZDA = new System.Windows.Forms.Panel();
-            this.splitterBtw_ZDA = new System.Windows.Forms.Splitter();
             this.groupBoxGraphic_ZDA = new System.Windows.Forms.GroupBox();
             this.chartGraphic_ZDA = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.splitterBtw_ZDA = new System.Windows.Forms.Splitter();
+            this.textBoxMax_ZDA = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.buttonMax_ZDA = new System.Windows.Forms.Button();
             this.menuStripUpPanel_ZDA.SuspendLayout();
             this.panelUp_ZDA.SuspendLayout();
+            this.groupBoxOutPut_ZDA.SuspendLayout();
+            this.groupBoxTools_ZDA.SuspendLayout();
             this.groupBoxInPutData_ZDA.SuspendLayout();
             this.panelLeft_ZDA.SuspendLayout();
             this.groupBoxBaza_ZDA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaza_ZDA)).BeginInit();
-            this.groupBoxTools_ZDA.SuspendLayout();
             this.panelRight_ZDA.SuspendLayout();
             this.groupBoxGraphic_ZDA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chartGraphic_ZDA)).BeginInit();
@@ -99,7 +107,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.выходToolStripMenuItem});
             this.menuStripUpPanel_ZDA.Location = new System.Drawing.Point(0, 0);
             this.menuStripUpPanel_ZDA.Name = "menuStripUpPanel_ZDA";
-            this.menuStripUpPanel_ZDA.Size = new System.Drawing.Size(1009, 24);
+            this.menuStripUpPanel_ZDA.Size = new System.Drawing.Size(1394, 24);
             this.menuStripUpPanel_ZDA.TabIndex = 0;
             this.menuStripUpPanel_ZDA.Text = "menuStrip1";
             // 
@@ -160,13 +168,179 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             // panelUp_ZDA
             // 
+            this.panelUp_ZDA.Controls.Add(this.groupBoxOutPut_ZDA);
             this.panelUp_ZDA.Controls.Add(this.groupBoxTools_ZDA);
             this.panelUp_ZDA.Controls.Add(this.groupBoxInPutData_ZDA);
             this.panelUp_ZDA.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelUp_ZDA.Location = new System.Drawing.Point(0, 24);
             this.panelUp_ZDA.Name = "panelUp_ZDA";
-            this.panelUp_ZDA.Size = new System.Drawing.Size(1009, 110);
+            this.panelUp_ZDA.Size = new System.Drawing.Size(1394, 110);
             this.panelUp_ZDA.TabIndex = 1;
+            // 
+            // groupBoxOutPut_ZDA
+            // 
+            this.groupBoxOutPut_ZDA.Controls.Add(this.buttonMax_ZDA);
+            this.groupBoxOutPut_ZDA.Controls.Add(this.label1);
+            this.groupBoxOutPut_ZDA.Controls.Add(this.labelMin_ZDA);
+            this.groupBoxOutPut_ZDA.Controls.Add(this.textBoxMax_ZDA);
+            this.groupBoxOutPut_ZDA.Controls.Add(this.buttonMin_ZDA);
+            this.groupBoxOutPut_ZDA.Controls.Add(this.textBoxMin_ZDA);
+            this.groupBoxOutPut_ZDA.Location = new System.Drawing.Point(1008, 3);
+            this.groupBoxOutPut_ZDA.Name = "groupBoxOutPut_ZDA";
+            this.groupBoxOutPut_ZDA.Size = new System.Drawing.Size(322, 102);
+            this.groupBoxOutPut_ZDA.TabIndex = 1;
+            this.groupBoxOutPut_ZDA.TabStop = false;
+            this.groupBoxOutPut_ZDA.Text = "Статистика";
+            // 
+            // labelMin_ZDA
+            // 
+            this.labelMin_ZDA.AutoSize = true;
+            this.labelMin_ZDA.Location = new System.Drawing.Point(16, 23);
+            this.labelMin_ZDA.Name = "labelMin_ZDA";
+            this.labelMin_ZDA.Size = new System.Drawing.Size(55, 13);
+            this.labelMin_ZDA.TabIndex = 2;
+            this.labelMin_ZDA.Text = "Мин цена";
+            // 
+            // buttonMin_ZDA
+            // 
+            this.buttonMin_ZDA.Enabled = false;
+            this.buttonMin_ZDA.Location = new System.Drawing.Point(6, 65);
+            this.buttonMin_ZDA.Name = "buttonMin_ZDA";
+            this.buttonMin_ZDA.Size = new System.Drawing.Size(75, 23);
+            this.buttonMin_ZDA.TabIndex = 1;
+            this.buttonMin_ZDA.Text = "Найти";
+            this.buttonMin_ZDA.UseVisualStyleBackColor = true;
+            this.buttonMin_ZDA.Click += new System.EventHandler(this.buttonMin_ZDA_Click);
+            // 
+            // textBoxMin_ZDA
+            // 
+            this.textBoxMin_ZDA.Location = new System.Drawing.Point(6, 39);
+            this.textBoxMin_ZDA.Name = "textBoxMin_ZDA";
+            this.textBoxMin_ZDA.ReadOnly = true;
+            this.textBoxMin_ZDA.Size = new System.Drawing.Size(75, 20);
+            this.textBoxMin_ZDA.TabIndex = 0;
+            // 
+            // groupBoxTools_ZDA
+            // 
+            this.groupBoxTools_ZDA.Controls.Add(this.radioButtonDiag_ZDA);
+            this.groupBoxTools_ZDA.Controls.Add(this.textBoxSearch_ZDA);
+            this.groupBoxTools_ZDA.Controls.Add(this.radioButtonGist_ZDA);
+            this.groupBoxTools_ZDA.Controls.Add(this.radioButtonFunct_ZDA);
+            this.groupBoxTools_ZDA.Controls.Add(this.buttonSearch_ZDA);
+            this.groupBoxTools_ZDA.Controls.Add(this.buttonRemove_ZDA);
+            this.groupBoxTools_ZDA.Controls.Add(this.buttonGraphic_ZDA);
+            this.groupBoxTools_ZDA.Controls.Add(this.buttonUpdate_ZDA);
+            this.groupBoxTools_ZDA.Controls.Add(this.buttonClear_ZDA);
+            this.groupBoxTools_ZDA.Controls.Add(this.buttonAdd_ZDA);
+            this.groupBoxTools_ZDA.Location = new System.Drawing.Point(442, 3);
+            this.groupBoxTools_ZDA.Name = "groupBoxTools_ZDA";
+            this.groupBoxTools_ZDA.Size = new System.Drawing.Size(560, 102);
+            this.groupBoxTools_ZDA.TabIndex = 0;
+            this.groupBoxTools_ZDA.TabStop = false;
+            this.groupBoxTools_ZDA.Text = "Инструменты";
+            // 
+            // radioButtonDiag_ZDA
+            // 
+            this.radioButtonDiag_ZDA.AutoSize = true;
+            this.radioButtonDiag_ZDA.Location = new System.Drawing.Point(362, 71);
+            this.radioButtonDiag_ZDA.Name = "radioButtonDiag_ZDA";
+            this.radioButtonDiag_ZDA.Size = new System.Drawing.Size(85, 17);
+            this.radioButtonDiag_ZDA.TabIndex = 3;
+            this.radioButtonDiag_ZDA.TabStop = true;
+            this.radioButtonDiag_ZDA.Text = "Диаграмма";
+            this.radioButtonDiag_ZDA.UseVisualStyleBackColor = true;
+            // 
+            // textBoxSearch_ZDA
+            // 
+            this.textBoxSearch_ZDA.Location = new System.Drawing.Point(184, 80);
+            this.textBoxSearch_ZDA.Name = "textBoxSearch_ZDA";
+            this.textBoxSearch_ZDA.Size = new System.Drawing.Size(172, 20);
+            this.textBoxSearch_ZDA.TabIndex = 5;
+            // 
+            // radioButtonGist_ZDA
+            // 
+            this.radioButtonGist_ZDA.AutoSize = true;
+            this.radioButtonGist_ZDA.Location = new System.Drawing.Point(439, 48);
+            this.radioButtonGist_ZDA.Name = "radioButtonGist_ZDA";
+            this.radioButtonGist_ZDA.Size = new System.Drawing.Size(93, 17);
+            this.radioButtonGist_ZDA.TabIndex = 1;
+            this.radioButtonGist_ZDA.TabStop = true;
+            this.radioButtonGist_ZDA.Text = "Гистограмма";
+            this.radioButtonGist_ZDA.UseVisualStyleBackColor = true;
+            // 
+            // radioButtonFunct_ZDA
+            // 
+            this.radioButtonFunct_ZDA.AutoSize = true;
+            this.radioButtonFunct_ZDA.Location = new System.Drawing.Point(362, 48);
+            this.radioButtonFunct_ZDA.Name = "radioButtonFunct_ZDA";
+            this.radioButtonFunct_ZDA.Size = new System.Drawing.Size(71, 17);
+            this.radioButtonFunct_ZDA.TabIndex = 2;
+            this.radioButtonFunct_ZDA.TabStop = true;
+            this.radioButtonFunct_ZDA.Text = "Функция";
+            this.radioButtonFunct_ZDA.UseVisualStyleBackColor = true;
+            // 
+            // buttonSearch_ZDA
+            // 
+            this.buttonSearch_ZDA.Enabled = false;
+            this.buttonSearch_ZDA.Location = new System.Drawing.Point(6, 77);
+            this.buttonSearch_ZDA.Name = "buttonSearch_ZDA";
+            this.buttonSearch_ZDA.Size = new System.Drawing.Size(172, 23);
+            this.buttonSearch_ZDA.TabIndex = 4;
+            this.buttonSearch_ZDA.Text = "Поиск элемента";
+            this.buttonSearch_ZDA.UseVisualStyleBackColor = true;
+            this.buttonSearch_ZDA.Click += new System.EventHandler(this.buttonSearch_ZDA_Click);
+            // 
+            // buttonRemove_ZDA
+            // 
+            this.buttonRemove_ZDA.Enabled = false;
+            this.buttonRemove_ZDA.Location = new System.Drawing.Point(6, 48);
+            this.buttonRemove_ZDA.Name = "buttonRemove_ZDA";
+            this.buttonRemove_ZDA.Size = new System.Drawing.Size(172, 23);
+            this.buttonRemove_ZDA.TabIndex = 3;
+            this.buttonRemove_ZDA.Text = "Удалить строку";
+            this.buttonRemove_ZDA.UseVisualStyleBackColor = true;
+            this.buttonRemove_ZDA.Click += new System.EventHandler(this.buttonRemove_ZDA_Click);
+            // 
+            // buttonGraphic_ZDA
+            // 
+            this.buttonGraphic_ZDA.Enabled = false;
+            this.buttonGraphic_ZDA.Location = new System.Drawing.Point(362, 19);
+            this.buttonGraphic_ZDA.Name = "buttonGraphic_ZDA";
+            this.buttonGraphic_ZDA.Size = new System.Drawing.Size(191, 23);
+            this.buttonGraphic_ZDA.TabIndex = 0;
+            this.buttonGraphic_ZDA.Text = "Вывести график";
+            this.buttonGraphic_ZDA.UseVisualStyleBackColor = true;
+            this.buttonGraphic_ZDA.Click += new System.EventHandler(this.buttonGraphic_ZDA_Click);
+            // 
+            // buttonUpdate_ZDA
+            // 
+            this.buttonUpdate_ZDA.Location = new System.Drawing.Point(184, 19);
+            this.buttonUpdate_ZDA.Name = "buttonUpdate_ZDA";
+            this.buttonUpdate_ZDA.Size = new System.Drawing.Size(172, 23);
+            this.buttonUpdate_ZDA.TabIndex = 2;
+            this.buttonUpdate_ZDA.Text = "Обновить данные";
+            this.buttonUpdate_ZDA.UseVisualStyleBackColor = true;
+            this.buttonUpdate_ZDA.Click += new System.EventHandler(this.buttonUpdate_ZDA_Click);
+            // 
+            // buttonClear_ZDA
+            // 
+            this.buttonClear_ZDA.Location = new System.Drawing.Point(184, 48);
+            this.buttonClear_ZDA.Name = "buttonClear_ZDA";
+            this.buttonClear_ZDA.Size = new System.Drawing.Size(172, 23);
+            this.buttonClear_ZDA.TabIndex = 1;
+            this.buttonClear_ZDA.Text = "Отчистить ввод";
+            this.buttonClear_ZDA.UseVisualStyleBackColor = true;
+            this.buttonClear_ZDA.Click += new System.EventHandler(this.buttonClear_ZDA_Click);
+            // 
+            // buttonAdd_ZDA
+            // 
+            this.buttonAdd_ZDA.Location = new System.Drawing.Point(6, 19);
+            this.buttonAdd_ZDA.Name = "buttonAdd_ZDA";
+            this.buttonAdd_ZDA.Size = new System.Drawing.Size(172, 23);
+            this.buttonAdd_ZDA.TabIndex = 0;
+            this.buttonAdd_ZDA.Text = "Добавить строку";
+            this.buttonAdd_ZDA.UseVisualStyleBackColor = true;
+            this.buttonAdd_ZDA.Click += new System.EventHandler(this.buttonAdd_ZDA_Click);
             // 
             // groupBoxInPutData_ZDA
             // 
@@ -192,6 +366,78 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.groupBoxInPutData_ZDA.TabIndex = 0;
             this.groupBoxInPutData_ZDA.TabStop = false;
             this.groupBoxInPutData_ZDA.Text = "Ввод данных";
+            // 
+            // labelDataGive_ZDA
+            // 
+            this.labelDataGive_ZDA.AutoSize = true;
+            this.labelDataGive_ZDA.Location = new System.Drawing.Point(321, 55);
+            this.labelDataGive_ZDA.Name = "labelDataGive_ZDA";
+            this.labelDataGive_ZDA.Size = new System.Drawing.Size(65, 13);
+            this.labelDataGive_ZDA.TabIndex = 15;
+            this.labelDataGive_ZDA.Text = "Дата сдачи";
+            // 
+            // labelDataGet_ZDA
+            // 
+            this.labelDataGet_ZDA.AutoSize = true;
+            this.labelDataGet_ZDA.Location = new System.Drawing.Point(321, 16);
+            this.labelDataGet_ZDA.Name = "labelDataGet_ZDA";
+            this.labelDataGet_ZDA.Size = new System.Drawing.Size(73, 13);
+            this.labelDataGet_ZDA.TabIndex = 14;
+            this.labelDataGet_ZDA.Text = "Дата выдачи";
+            // 
+            // labelTicketNumber_ZDA
+            // 
+            this.labelTicketNumber_ZDA.AutoSize = true;
+            this.labelTicketNumber_ZDA.Location = new System.Drawing.Point(215, 55);
+            this.labelTicketNumber_ZDA.Name = "labelTicketNumber_ZDA";
+            this.labelTicketNumber_ZDA.Size = new System.Drawing.Size(98, 13);
+            this.labelTicketNumber_ZDA.TabIndex = 13;
+            this.labelTicketNumber_ZDA.Text = "Номер чит.билета";
+            // 
+            // labelFIO_ZDA
+            // 
+            this.labelFIO_ZDA.AutoSize = true;
+            this.labelFIO_ZDA.Location = new System.Drawing.Point(215, 16);
+            this.labelFIO_ZDA.Name = "labelFIO_ZDA";
+            this.labelFIO_ZDA.Size = new System.Drawing.Size(40, 13);
+            this.labelFIO_ZDA.TabIndex = 12;
+            this.labelFIO_ZDA.Text = "Ф.И.О";
+            // 
+            // labelPrice_ZDA
+            // 
+            this.labelPrice_ZDA.AutoSize = true;
+            this.labelPrice_ZDA.Location = new System.Drawing.Point(109, 55);
+            this.labelPrice_ZDA.Name = "labelPrice_ZDA";
+            this.labelPrice_ZDA.Size = new System.Drawing.Size(33, 13);
+            this.labelPrice_ZDA.TabIndex = 11;
+            this.labelPrice_ZDA.Text = "Цена";
+            // 
+            // labelBookName_ZDA
+            // 
+            this.labelBookName_ZDA.AutoSize = true;
+            this.labelBookName_ZDA.Location = new System.Drawing.Point(109, 16);
+            this.labelBookName_ZDA.Name = "labelBookName_ZDA";
+            this.labelBookName_ZDA.Size = new System.Drawing.Size(89, 13);
+            this.labelBookName_ZDA.TabIndex = 10;
+            this.labelBookName_ZDA.Text = "Название книги";
+            // 
+            // labelAuthor_ZDA
+            // 
+            this.labelAuthor_ZDA.AutoSize = true;
+            this.labelAuthor_ZDA.Location = new System.Drawing.Point(6, 55);
+            this.labelAuthor_ZDA.Name = "labelAuthor_ZDA";
+            this.labelAuthor_ZDA.Size = new System.Drawing.Size(37, 13);
+            this.labelAuthor_ZDA.TabIndex = 9;
+            this.labelAuthor_ZDA.Text = "Автор";
+            // 
+            // labelYear_ZDA
+            // 
+            this.labelYear_ZDA.AutoSize = true;
+            this.labelYear_ZDA.Location = new System.Drawing.Point(6, 16);
+            this.labelYear_ZDA.Name = "labelYear_ZDA";
+            this.labelYear_ZDA.Size = new System.Drawing.Size(70, 13);
+            this.labelYear_ZDA.TabIndex = 8;
+            this.labelYear_ZDA.Text = "Год издания";
             // 
             // textBoxDataGive_ZDA
             // 
@@ -281,205 +527,43 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.dataGridViewBaza_ZDA.TabIndex = 0;
             this.dataGridViewBaza_ZDA.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewBaza_ZDA_CellClick);
             // 
-            // groupBoxTools_ZDA
-            // 
-            this.groupBoxTools_ZDA.Controls.Add(this.radioButtonDiag_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.textBoxSearch_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.radioButtonGist_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.radioButtonFunct_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.buttonSearch_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.buttonRemove_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.buttonGraphic_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.buttonUpdate_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.buttonClear_ZDA);
-            this.groupBoxTools_ZDA.Controls.Add(this.buttonAdd_ZDA);
-            this.groupBoxTools_ZDA.Location = new System.Drawing.Point(442, 3);
-            this.groupBoxTools_ZDA.Name = "groupBoxTools_ZDA";
-            this.groupBoxTools_ZDA.Size = new System.Drawing.Size(560, 102);
-            this.groupBoxTools_ZDA.TabIndex = 0;
-            this.groupBoxTools_ZDA.TabStop = false;
-            this.groupBoxTools_ZDA.Text = "Инструменты";
-            // 
-            // textBoxSearch_ZDA
-            // 
-            this.textBoxSearch_ZDA.Location = new System.Drawing.Point(184, 80);
-            this.textBoxSearch_ZDA.Name = "textBoxSearch_ZDA";
-            this.textBoxSearch_ZDA.Size = new System.Drawing.Size(172, 20);
-            this.textBoxSearch_ZDA.TabIndex = 5;
-            // 
-            // buttonSearch_ZDA
-            // 
-            this.buttonSearch_ZDA.Location = new System.Drawing.Point(6, 77);
-            this.buttonSearch_ZDA.Name = "buttonSearch_ZDA";
-            this.buttonSearch_ZDA.Size = new System.Drawing.Size(172, 23);
-            this.buttonSearch_ZDA.TabIndex = 4;
-            this.buttonSearch_ZDA.Text = "Поиск элемента";
-            this.buttonSearch_ZDA.UseVisualStyleBackColor = true;
-            this.buttonSearch_ZDA.Click += new System.EventHandler(this.buttonSearch_ZDA_Click);
-            // 
-            // buttonRemove_ZDA
-            // 
-            this.buttonRemove_ZDA.Location = new System.Drawing.Point(6, 48);
-            this.buttonRemove_ZDA.Name = "buttonRemove_ZDA";
-            this.buttonRemove_ZDA.Size = new System.Drawing.Size(172, 23);
-            this.buttonRemove_ZDA.TabIndex = 3;
-            this.buttonRemove_ZDA.Text = "Удалить строку";
-            this.buttonRemove_ZDA.UseVisualStyleBackColor = true;
-            this.buttonRemove_ZDA.Click += new System.EventHandler(this.buttonRemove_ZDA_Click);
-            // 
-            // buttonUpdate_ZDA
-            // 
-            this.buttonUpdate_ZDA.Location = new System.Drawing.Point(184, 19);
-            this.buttonUpdate_ZDA.Name = "buttonUpdate_ZDA";
-            this.buttonUpdate_ZDA.Size = new System.Drawing.Size(172, 23);
-            this.buttonUpdate_ZDA.TabIndex = 2;
-            this.buttonUpdate_ZDA.Text = "Обновить данные";
-            this.buttonUpdate_ZDA.UseVisualStyleBackColor = true;
-            this.buttonUpdate_ZDA.Click += new System.EventHandler(this.buttonUpdate_ZDA_Click);
-            // 
-            // buttonClear_ZDA
-            // 
-            this.buttonClear_ZDA.Location = new System.Drawing.Point(184, 48);
-            this.buttonClear_ZDA.Name = "buttonClear_ZDA";
-            this.buttonClear_ZDA.Size = new System.Drawing.Size(172, 23);
-            this.buttonClear_ZDA.TabIndex = 1;
-            this.buttonClear_ZDA.Text = "Отчистить строку";
-            this.buttonClear_ZDA.UseVisualStyleBackColor = true;
-            this.buttonClear_ZDA.Click += new System.EventHandler(this.buttonClear_ZDA_Click);
-            // 
-            // buttonAdd_ZDA
-            // 
-            this.buttonAdd_ZDA.Location = new System.Drawing.Point(6, 19);
-            this.buttonAdd_ZDA.Name = "buttonAdd_ZDA";
-            this.buttonAdd_ZDA.Size = new System.Drawing.Size(172, 23);
-            this.buttonAdd_ZDA.TabIndex = 0;
-            this.buttonAdd_ZDA.Text = "Добавить строку";
-            this.buttonAdd_ZDA.UseVisualStyleBackColor = true;
-            this.buttonAdd_ZDA.Click += new System.EventHandler(this.buttonAdd_ZDA_Click);
-            // 
-            // buttonGraphic_ZDA
-            // 
-            this.buttonGraphic_ZDA.Location = new System.Drawing.Point(362, 19);
-            this.buttonGraphic_ZDA.Name = "buttonGraphic_ZDA";
-            this.buttonGraphic_ZDA.Size = new System.Drawing.Size(191, 23);
-            this.buttonGraphic_ZDA.TabIndex = 0;
-            this.buttonGraphic_ZDA.Text = "Вывести график";
-            this.buttonGraphic_ZDA.UseVisualStyleBackColor = true;
-            this.buttonGraphic_ZDA.Click += new System.EventHandler(this.buttonGraphic_ZDA_Click);
-            // 
-            // radioButtonGist_ZDA
-            // 
-            this.radioButtonGist_ZDA.AutoSize = true;
-            this.radioButtonGist_ZDA.Location = new System.Drawing.Point(439, 48);
-            this.radioButtonGist_ZDA.Name = "radioButtonGist_ZDA";
-            this.radioButtonGist_ZDA.Size = new System.Drawing.Size(93, 17);
-            this.radioButtonGist_ZDA.TabIndex = 1;
-            this.radioButtonGist_ZDA.TabStop = true;
-            this.radioButtonGist_ZDA.Text = "Гистограмма";
-            this.radioButtonGist_ZDA.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonFunct_ZDA
-            // 
-            this.radioButtonFunct_ZDA.AutoSize = true;
-            this.radioButtonFunct_ZDA.Location = new System.Drawing.Point(362, 48);
-            this.radioButtonFunct_ZDA.Name = "radioButtonFunct_ZDA";
-            this.radioButtonFunct_ZDA.Size = new System.Drawing.Size(71, 17);
-            this.radioButtonFunct_ZDA.TabIndex = 2;
-            this.radioButtonFunct_ZDA.TabStop = true;
-            this.radioButtonFunct_ZDA.Text = "Функция";
-            this.radioButtonFunct_ZDA.UseVisualStyleBackColor = true;
-            // 
-            // radioButtonDiag_ZDA
-            // 
-            this.radioButtonDiag_ZDA.AutoSize = true;
-            this.radioButtonDiag_ZDA.Location = new System.Drawing.Point(362, 71);
-            this.radioButtonDiag_ZDA.Name = "radioButtonDiag_ZDA";
-            this.radioButtonDiag_ZDA.Size = new System.Drawing.Size(85, 17);
-            this.radioButtonDiag_ZDA.TabIndex = 3;
-            this.radioButtonDiag_ZDA.TabStop = true;
-            this.radioButtonDiag_ZDA.Text = "Диаграмма";
-            this.radioButtonDiag_ZDA.UseVisualStyleBackColor = true;
-            // 
-            // labelYear_ZDA
-            // 
-            this.labelYear_ZDA.AutoSize = true;
-            this.labelYear_ZDA.Location = new System.Drawing.Point(6, 16);
-            this.labelYear_ZDA.Name = "labelYear_ZDA";
-            this.labelYear_ZDA.Size = new System.Drawing.Size(70, 13);
-            this.labelYear_ZDA.TabIndex = 8;
-            this.labelYear_ZDA.Text = "Год издания";
-            // 
-            // labelAuthor_ZDA
-            // 
-            this.labelAuthor_ZDA.AutoSize = true;
-            this.labelAuthor_ZDA.Location = new System.Drawing.Point(6, 55);
-            this.labelAuthor_ZDA.Name = "labelAuthor_ZDA";
-            this.labelAuthor_ZDA.Size = new System.Drawing.Size(37, 13);
-            this.labelAuthor_ZDA.TabIndex = 9;
-            this.labelAuthor_ZDA.Text = "Автор";
-            // 
-            // labelBookName_ZDA
-            // 
-            this.labelBookName_ZDA.AutoSize = true;
-            this.labelBookName_ZDA.Location = new System.Drawing.Point(109, 16);
-            this.labelBookName_ZDA.Name = "labelBookName_ZDA";
-            this.labelBookName_ZDA.Size = new System.Drawing.Size(89, 13);
-            this.labelBookName_ZDA.TabIndex = 10;
-            this.labelBookName_ZDA.Text = "Название книги";
-            // 
-            // labelPrice_ZDA
-            // 
-            this.labelPrice_ZDA.AutoSize = true;
-            this.labelPrice_ZDA.Location = new System.Drawing.Point(109, 55);
-            this.labelPrice_ZDA.Name = "labelPrice_ZDA";
-            this.labelPrice_ZDA.Size = new System.Drawing.Size(33, 13);
-            this.labelPrice_ZDA.TabIndex = 11;
-            this.labelPrice_ZDA.Text = "Цена";
-            // 
-            // labelFIO_ZDA
-            // 
-            this.labelFIO_ZDA.AutoSize = true;
-            this.labelFIO_ZDA.Location = new System.Drawing.Point(215, 16);
-            this.labelFIO_ZDA.Name = "labelFIO_ZDA";
-            this.labelFIO_ZDA.Size = new System.Drawing.Size(40, 13);
-            this.labelFIO_ZDA.TabIndex = 12;
-            this.labelFIO_ZDA.Text = "Ф.И.О";
-            // 
-            // labelTicketNumber_ZDA
-            // 
-            this.labelTicketNumber_ZDA.AutoSize = true;
-            this.labelTicketNumber_ZDA.Location = new System.Drawing.Point(215, 55);
-            this.labelTicketNumber_ZDA.Name = "labelTicketNumber_ZDA";
-            this.labelTicketNumber_ZDA.Size = new System.Drawing.Size(98, 13);
-            this.labelTicketNumber_ZDA.TabIndex = 13;
-            this.labelTicketNumber_ZDA.Text = "Номер чит.билета";
-            // 
-            // labelDataGet_ZDA
-            // 
-            this.labelDataGet_ZDA.AutoSize = true;
-            this.labelDataGet_ZDA.Location = new System.Drawing.Point(321, 16);
-            this.labelDataGet_ZDA.Name = "labelDataGet_ZDA";
-            this.labelDataGet_ZDA.Size = new System.Drawing.Size(73, 13);
-            this.labelDataGet_ZDA.TabIndex = 14;
-            this.labelDataGet_ZDA.Text = "Дата выдачи";
-            // 
-            // labelDataGive_ZDA
-            // 
-            this.labelDataGive_ZDA.AutoSize = true;
-            this.labelDataGive_ZDA.Location = new System.Drawing.Point(321, 55);
-            this.labelDataGive_ZDA.Name = "labelDataGive_ZDA";
-            this.labelDataGive_ZDA.Size = new System.Drawing.Size(65, 13);
-            this.labelDataGive_ZDA.TabIndex = 15;
-            this.labelDataGive_ZDA.Text = "Дата сдачи";
-            // 
             // panelRight_ZDA
             // 
             this.panelRight_ZDA.Controls.Add(this.groupBoxGraphic_ZDA);
             this.panelRight_ZDA.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRight_ZDA.Location = new System.Drawing.Point(465, 134);
             this.panelRight_ZDA.Name = "panelRight_ZDA";
-            this.panelRight_ZDA.Size = new System.Drawing.Size(544, 402);
+            this.panelRight_ZDA.Size = new System.Drawing.Size(929, 402);
             this.panelRight_ZDA.TabIndex = 3;
+            // 
+            // groupBoxGraphic_ZDA
+            // 
+            this.groupBoxGraphic_ZDA.Controls.Add(this.chartGraphic_ZDA);
+            this.groupBoxGraphic_ZDA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBoxGraphic_ZDA.Location = new System.Drawing.Point(0, 0);
+            this.groupBoxGraphic_ZDA.Name = "groupBoxGraphic_ZDA";
+            this.groupBoxGraphic_ZDA.Size = new System.Drawing.Size(929, 402);
+            this.groupBoxGraphic_ZDA.TabIndex = 0;
+            this.groupBoxGraphic_ZDA.TabStop = false;
+            this.groupBoxGraphic_ZDA.Text = "Графики";
+            // 
+            // chartGraphic_ZDA
+            // 
+            chartArea5.Name = "ChartArea1";
+            this.chartGraphic_ZDA.ChartAreas.Add(chartArea5);
+            this.chartGraphic_ZDA.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend5.Enabled = false;
+            legend5.Name = "Legend1";
+            this.chartGraphic_ZDA.Legends.Add(legend5);
+            this.chartGraphic_ZDA.Location = new System.Drawing.Point(3, 16);
+            this.chartGraphic_ZDA.Name = "chartGraphic_ZDA";
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartGraphic_ZDA.Series.Add(series5);
+            this.chartGraphic_ZDA.Size = new System.Drawing.Size(923, 383);
+            this.chartGraphic_ZDA.TabIndex = 0;
+            this.chartGraphic_ZDA.Text = "График";
             // 
             // splitterBtw_ZDA
             // 
@@ -489,40 +573,39 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.splitterBtw_ZDA.TabIndex = 4;
             this.splitterBtw_ZDA.TabStop = false;
             // 
-            // groupBoxGraphic_ZDA
+            // textBoxMax_ZDA
             // 
-            this.groupBoxGraphic_ZDA.Controls.Add(this.chartGraphic_ZDA);
-            this.groupBoxGraphic_ZDA.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBoxGraphic_ZDA.Location = new System.Drawing.Point(0, 0);
-            this.groupBoxGraphic_ZDA.Name = "groupBoxGraphic_ZDA";
-            this.groupBoxGraphic_ZDA.Size = new System.Drawing.Size(544, 402);
-            this.groupBoxGraphic_ZDA.TabIndex = 0;
-            this.groupBoxGraphic_ZDA.TabStop = false;
-            this.groupBoxGraphic_ZDA.Text = "Графики";
+            this.textBoxMax_ZDA.Location = new System.Drawing.Point(87, 39);
+            this.textBoxMax_ZDA.Name = "textBoxMax_ZDA";
+            this.textBoxMax_ZDA.ReadOnly = true;
+            this.textBoxMax_ZDA.Size = new System.Drawing.Size(75, 20);
+            this.textBoxMax_ZDA.TabIndex = 0;
             // 
-            // chartGraphic_ZDA
+            // label1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartGraphic_ZDA.ChartAreas.Add(chartArea1);
-            this.chartGraphic_ZDA.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chartGraphic_ZDA.Legends.Add(legend1);
-            this.chartGraphic_ZDA.Location = new System.Drawing.Point(3, 16);
-            this.chartGraphic_ZDA.Name = "chartGraphic_ZDA";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartGraphic_ZDA.Series.Add(series1);
-            this.chartGraphic_ZDA.Size = new System.Drawing.Size(538, 383);
-            this.chartGraphic_ZDA.TabIndex = 0;
-            this.chartGraphic_ZDA.Text = "График";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(93, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Макс цена";
+            // 
+            // buttonMax_ZDA
+            // 
+            this.buttonMax_ZDA.Enabled = false;
+            this.buttonMax_ZDA.Location = new System.Drawing.Point(87, 65);
+            this.buttonMax_ZDA.Name = "buttonMax_ZDA";
+            this.buttonMax_ZDA.Size = new System.Drawing.Size(75, 23);
+            this.buttonMax_ZDA.TabIndex = 3;
+            this.buttonMax_ZDA.Text = "Найти";
+            this.buttonMax_ZDA.UseVisualStyleBackColor = true;
+            this.buttonMax_ZDA.Click += new System.EventHandler(this.buttonMax_ZDA_Click);
             // 
             // FormMain_ZDA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1009, 536);
+            this.ClientSize = new System.Drawing.Size(1394, 536);
             this.Controls.Add(this.splitterBtw_ZDA);
             this.Controls.Add(this.panelRight_ZDA);
             this.Controls.Add(this.panelLeft_ZDA);
@@ -537,13 +620,15 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.menuStripUpPanel_ZDA.ResumeLayout(false);
             this.menuStripUpPanel_ZDA.PerformLayout();
             this.panelUp_ZDA.ResumeLayout(false);
+            this.groupBoxOutPut_ZDA.ResumeLayout(false);
+            this.groupBoxOutPut_ZDA.PerformLayout();
+            this.groupBoxTools_ZDA.ResumeLayout(false);
+            this.groupBoxTools_ZDA.PerformLayout();
             this.groupBoxInPutData_ZDA.ResumeLayout(false);
             this.groupBoxInPutData_ZDA.PerformLayout();
             this.panelLeft_ZDA.ResumeLayout(false);
             this.groupBoxBaza_ZDA.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBaza_ZDA)).EndInit();
-            this.groupBoxTools_ZDA.ResumeLayout(false);
-            this.groupBoxTools_ZDA.PerformLayout();
             this.panelRight_ZDA.ResumeLayout(false);
             this.groupBoxGraphic_ZDA.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chartGraphic_ZDA)).EndInit();
@@ -600,6 +685,13 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         private System.Windows.Forms.GroupBox groupBoxGraphic_ZDA;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartGraphic_ZDA;
         private System.Windows.Forms.Splitter splitterBtw_ZDA;
+        private System.Windows.Forms.GroupBox groupBoxOutPut_ZDA;
+        private System.Windows.Forms.TextBox textBoxMin_ZDA;
+        private System.Windows.Forms.Button buttonMin_ZDA;
+        private System.Windows.Forms.Label labelMin_ZDA;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBoxMax_ZDA;
+        private System.Windows.Forms.Button buttonMax_ZDA;
     }
 }
 

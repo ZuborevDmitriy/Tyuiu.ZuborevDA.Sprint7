@@ -81,6 +81,11 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                     data.Tables["LBaza"].Rows.Add(items);
                 }
                 this.dataGridViewBaza_ZDA.DataSource = data.Tables["LBaza"].DefaultView;
+                buttonMax_ZDA.Enabled = true;
+                buttonMin_ZDA.Enabled = true;
+                buttonSearch_ZDA.Enabled = true;
+                buttonRemove_ZDA.Enabled = true;
+                buttonGraphic_ZDA.Enabled = true;
 
             }
             catch
@@ -185,6 +190,11 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 {
                     table.Rows.Add(textBoxYear_ZDA.Text, textBoxAuthor_ZDA.Text, textBoxBookName_ZDA.Text, textBoxPrice_ZDA.Text, textBoxFIO_ZDA.Text, textBoxNumberTicket_ZDA.Text, textBoxDataGet_ZDA.Text, textBoxDataGive_ZDA.Text);
                     MessageBox.Show("Данные добавлены!", "Внимание!");
+                    buttonMax_ZDA.Enabled = true;
+                    buttonMin_ZDA.Enabled = true;
+                    buttonSearch_ZDA.Enabled = true;
+                    buttonRemove_ZDA.Enabled = true;
+                    buttonGraphic_ZDA.Enabled = true;
                 }
             }
             catch
@@ -286,13 +296,6 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                         this.chartGraphic_ZDA.ChartAreas[0].AxisX.Title = "Автор";
                         this.chartGraphic_ZDA.ChartAreas[0].AxisY.Title = "Кол-во книг";
 
-                        Dictionary<string, int> ExceptionMessages = new Dictionary<string, int>();
-
-                        ExceptionMessages.Add(Convert.ToString(dataGridViewBaza_ZDA.Rows[i].Cells["Автор"].Value), 20);
-
-                        foreach (KeyValuePair<string, int> exception in ExceptionMessages)
-                            chartGraphic_ZDA.Series[0].Points.AddXY(exception.Key, exception.Value);
-
                     }
                 }
                 if (radioButtonDiag_ZDA.Checked)
@@ -315,6 +318,28 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             {
                 MessageBox.Show("Что-то пошло не так.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void buttonMin_ZDA_Click(object sender, EventArgs e)
+        {
+            int min = (int)dataGridViewBaza_ZDA.Rows[0].Cells[3].Value;
+            for (int i = 0; i < dataGridViewBaza_ZDA.RowCount; i++)
+            {
+                if (dataGridViewBaza_ZDA.Rows[i].Cells[3].Value != null && (int)dataGridViewBaza_ZDA.Rows[i].Cells[3].Value < min)
+                    min = (int)dataGridViewBaza_ZDA.Rows[i].Cells[3].Value;
+            }
+            textBoxMin_ZDA.Text = min.ToString();
+        }
+
+        private void buttonMax_ZDA_Click(object sender, EventArgs e)
+        {
+            int max = (int)dataGridViewBaza_ZDA.Rows[0].Cells[3].Value;
+            for (int i = 0; i < dataGridViewBaza_ZDA.RowCount; i++)
+            {
+                if (dataGridViewBaza_ZDA.Rows[i].Cells[3].Value != null && (int)dataGridViewBaza_ZDA.Rows[i].Cells[3].Value > max)
+                    max = (int)dataGridViewBaza_ZDA.Rows[i].Cells[3].Value;
+            }
+            textBoxMax_ZDA.Text = max.ToString();
         }
     }
 }

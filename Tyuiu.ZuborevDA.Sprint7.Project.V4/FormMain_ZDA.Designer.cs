@@ -29,9 +29,9 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStripUpPanel_ZDA = new System.Windows.Forms.MenuStrip();
             this.действияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -208,6 +208,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             // buttonSrAr_ZDA
             // 
+            this.buttonSrAr_ZDA.Enabled = false;
             this.buttonSrAr_ZDA.Location = new System.Drawing.Point(168, 65);
             this.buttonSrAr_ZDA.Name = "buttonSrAr_ZDA";
             this.buttonSrAr_ZDA.Size = new System.Drawing.Size(75, 23);
@@ -601,18 +602,18 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             // chartGraphic_ZDA
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartGraphic_ZDA.ChartAreas.Add(chartArea1);
+            chartArea2.Name = "ChartArea1";
+            this.chartGraphic_ZDA.ChartAreas.Add(chartArea2);
             this.chartGraphic_ZDA.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chartGraphic_ZDA.Legends.Add(legend1);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.chartGraphic_ZDA.Legends.Add(legend2);
             this.chartGraphic_ZDA.Location = new System.Drawing.Point(3, 16);
             this.chartGraphic_ZDA.Name = "chartGraphic_ZDA";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chartGraphic_ZDA.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartGraphic_ZDA.Series.Add(series2);
             this.chartGraphic_ZDA.Size = new System.Drawing.Size(923, 383);
             this.chartGraphic_ZDA.TabIndex = 0;
             this.chartGraphic_ZDA.Text = "График";

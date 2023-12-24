@@ -29,9 +29,9 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.menuStripUpPanel_ZDA = new System.Windows.Forms.MenuStrip();
             this.действияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,7 +44,12 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.saveFileDialogBaza_ZDA = new System.Windows.Forms.SaveFileDialog();
             this.panelUp_ZDA = new System.Windows.Forms.Panel();
             this.groupBoxOutPut_ZDA = new System.Windows.Forms.GroupBox();
+            this.textBoxSredn_ZDA = new System.Windows.Forms.TextBox();
+            this.buttonSrAr_ZDA = new System.Windows.Forms.Button();
+            this.buttonMax_ZDA = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelMin_ZDA = new System.Windows.Forms.Label();
+            this.textBoxMax_ZDA = new System.Windows.Forms.TextBox();
             this.buttonMin_ZDA = new System.Windows.Forms.Button();
             this.textBoxMin_ZDA = new System.Windows.Forms.TextBox();
             this.groupBoxTools_ZDA = new System.Windows.Forms.GroupBox();
@@ -82,9 +87,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.groupBoxGraphic_ZDA = new System.Windows.Forms.GroupBox();
             this.chartGraphic_ZDA = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.splitterBtw_ZDA = new System.Windows.Forms.Splitter();
-            this.textBoxMax_ZDA = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.buttonMax_ZDA = new System.Windows.Forms.Button();
+            this.labelSredn_ZDA = new System.Windows.Forms.Label();
             this.menuStripUpPanel_ZDA.SuspendLayout();
             this.panelUp_ZDA.SuspendLayout();
             this.groupBoxOutPut_ZDA.SuspendLayout();
@@ -179,6 +182,9 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             // groupBoxOutPut_ZDA
             // 
+            this.groupBoxOutPut_ZDA.Controls.Add(this.labelSredn_ZDA);
+            this.groupBoxOutPut_ZDA.Controls.Add(this.textBoxSredn_ZDA);
+            this.groupBoxOutPut_ZDA.Controls.Add(this.buttonSrAr_ZDA);
             this.groupBoxOutPut_ZDA.Controls.Add(this.buttonMax_ZDA);
             this.groupBoxOutPut_ZDA.Controls.Add(this.label1);
             this.groupBoxOutPut_ZDA.Controls.Add(this.labelMin_ZDA);
@@ -187,10 +193,48 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.groupBoxOutPut_ZDA.Controls.Add(this.textBoxMin_ZDA);
             this.groupBoxOutPut_ZDA.Location = new System.Drawing.Point(1008, 3);
             this.groupBoxOutPut_ZDA.Name = "groupBoxOutPut_ZDA";
-            this.groupBoxOutPut_ZDA.Size = new System.Drawing.Size(322, 102);
+            this.groupBoxOutPut_ZDA.Size = new System.Drawing.Size(253, 102);
             this.groupBoxOutPut_ZDA.TabIndex = 1;
             this.groupBoxOutPut_ZDA.TabStop = false;
             this.groupBoxOutPut_ZDA.Text = "Статистика";
+            // 
+            // textBoxSredn_ZDA
+            // 
+            this.textBoxSredn_ZDA.Location = new System.Drawing.Point(168, 39);
+            this.textBoxSredn_ZDA.Name = "textBoxSredn_ZDA";
+            this.textBoxSredn_ZDA.ReadOnly = true;
+            this.textBoxSredn_ZDA.Size = new System.Drawing.Size(75, 20);
+            this.textBoxSredn_ZDA.TabIndex = 5;
+            // 
+            // buttonSrAr_ZDA
+            // 
+            this.buttonSrAr_ZDA.Location = new System.Drawing.Point(168, 65);
+            this.buttonSrAr_ZDA.Name = "buttonSrAr_ZDA";
+            this.buttonSrAr_ZDA.Size = new System.Drawing.Size(75, 23);
+            this.buttonSrAr_ZDA.TabIndex = 4;
+            this.buttonSrAr_ZDA.Text = "Найти";
+            this.buttonSrAr_ZDA.UseVisualStyleBackColor = true;
+            this.buttonSrAr_ZDA.Click += new System.EventHandler(this.buttonSrAr_ZDA_Click);
+            // 
+            // buttonMax_ZDA
+            // 
+            this.buttonMax_ZDA.Enabled = false;
+            this.buttonMax_ZDA.Location = new System.Drawing.Point(87, 65);
+            this.buttonMax_ZDA.Name = "buttonMax_ZDA";
+            this.buttonMax_ZDA.Size = new System.Drawing.Size(75, 23);
+            this.buttonMax_ZDA.TabIndex = 3;
+            this.buttonMax_ZDA.Text = "Найти";
+            this.buttonMax_ZDA.UseVisualStyleBackColor = true;
+            this.buttonMax_ZDA.Click += new System.EventHandler(this.buttonMax_ZDA_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(93, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Макс цена";
             // 
             // labelMin_ZDA
             // 
@@ -200,6 +244,14 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.labelMin_ZDA.Size = new System.Drawing.Size(55, 13);
             this.labelMin_ZDA.TabIndex = 2;
             this.labelMin_ZDA.Text = "Мин цена";
+            // 
+            // textBoxMax_ZDA
+            // 
+            this.textBoxMax_ZDA.Location = new System.Drawing.Point(87, 39);
+            this.textBoxMax_ZDA.Name = "textBoxMax_ZDA";
+            this.textBoxMax_ZDA.ReadOnly = true;
+            this.textBoxMax_ZDA.Size = new System.Drawing.Size(75, 20);
+            this.textBoxMax_ZDA.TabIndex = 0;
             // 
             // buttonMin_ZDA
             // 
@@ -549,18 +601,18 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             // chartGraphic_ZDA
             // 
-            chartArea5.Name = "ChartArea1";
-            this.chartGraphic_ZDA.ChartAreas.Add(chartArea5);
+            chartArea1.Name = "ChartArea1";
+            this.chartGraphic_ZDA.ChartAreas.Add(chartArea1);
             this.chartGraphic_ZDA.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend5.Enabled = false;
-            legend5.Name = "Legend1";
-            this.chartGraphic_ZDA.Legends.Add(legend5);
+            legend1.Enabled = false;
+            legend1.Name = "Legend1";
+            this.chartGraphic_ZDA.Legends.Add(legend1);
             this.chartGraphic_ZDA.Location = new System.Drawing.Point(3, 16);
             this.chartGraphic_ZDA.Name = "chartGraphic_ZDA";
-            series5.ChartArea = "ChartArea1";
-            series5.Legend = "Legend1";
-            series5.Name = "Series1";
-            this.chartGraphic_ZDA.Series.Add(series5);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartGraphic_ZDA.Series.Add(series1);
             this.chartGraphic_ZDA.Size = new System.Drawing.Size(923, 383);
             this.chartGraphic_ZDA.TabIndex = 0;
             this.chartGraphic_ZDA.Text = "График";
@@ -573,33 +625,14 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.splitterBtw_ZDA.TabIndex = 4;
             this.splitterBtw_ZDA.TabStop = false;
             // 
-            // textBoxMax_ZDA
+            // labelSredn_ZDA
             // 
-            this.textBoxMax_ZDA.Location = new System.Drawing.Point(87, 39);
-            this.textBoxMax_ZDA.Name = "textBoxMax_ZDA";
-            this.textBoxMax_ZDA.ReadOnly = true;
-            this.textBoxMax_ZDA.Size = new System.Drawing.Size(75, 20);
-            this.textBoxMax_ZDA.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(93, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Макс цена";
-            // 
-            // buttonMax_ZDA
-            // 
-            this.buttonMax_ZDA.Enabled = false;
-            this.buttonMax_ZDA.Location = new System.Drawing.Point(87, 65);
-            this.buttonMax_ZDA.Name = "buttonMax_ZDA";
-            this.buttonMax_ZDA.Size = new System.Drawing.Size(75, 23);
-            this.buttonMax_ZDA.TabIndex = 3;
-            this.buttonMax_ZDA.Text = "Найти";
-            this.buttonMax_ZDA.UseVisualStyleBackColor = true;
-            this.buttonMax_ZDA.Click += new System.EventHandler(this.buttonMax_ZDA_Click);
+            this.labelSredn_ZDA.AutoSize = true;
+            this.labelSredn_ZDA.Location = new System.Drawing.Point(166, 23);
+            this.labelSredn_ZDA.Name = "labelSredn_ZDA";
+            this.labelSredn_ZDA.Size = new System.Drawing.Size(77, 13);
+            this.labelSredn_ZDA.TabIndex = 6;
+            this.labelSredn_ZDA.Text = "Средняя цена";
             // 
             // FormMain_ZDA
             // 
@@ -692,6 +725,9 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxMax_ZDA;
         private System.Windows.Forms.Button buttonMax_ZDA;
+        private System.Windows.Forms.Button buttonSrAr_ZDA;
+        private System.Windows.Forms.TextBox textBoxSredn_ZDA;
+        private System.Windows.Forms.Label labelSredn_ZDA;
     }
 }
 

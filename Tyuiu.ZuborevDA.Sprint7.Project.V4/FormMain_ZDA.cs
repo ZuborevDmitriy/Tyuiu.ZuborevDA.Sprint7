@@ -271,7 +271,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         {
             try
             {
-                if(radioButtonGist_ZDA.Checked)
+                if (radioButtonGist_ZDA.Checked)
                 {
                     for (int i = 0; i < dataGridViewBaza_ZDA.Rows.Count; i++)
                     {
@@ -326,7 +326,9 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             for (int i = 0; i < dataGridViewBaza_ZDA.RowCount; i++)
             {
                 if (dataGridViewBaza_ZDA.Rows[i].Cells[3].Value != null && (int)dataGridViewBaza_ZDA.Rows[i].Cells[3].Value < min)
+                {
                     min = (int)dataGridViewBaza_ZDA.Rows[i].Cells[3].Value;
+                }
             }
             textBoxMin_ZDA.Text = min.ToString();
         }
@@ -337,9 +339,24 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             for (int i = 0; i < dataGridViewBaza_ZDA.RowCount; i++)
             {
                 if (dataGridViewBaza_ZDA.Rows[i].Cells[3].Value != null && (int)dataGridViewBaza_ZDA.Rows[i].Cells[3].Value > max)
+                {
                     max = (int)dataGridViewBaza_ZDA.Rows[i].Cells[3].Value;
+                }
             }
             textBoxMax_ZDA.Text = max.ToString();
+        }
+
+        private void buttonSrAr_ZDA_Click(object sender, EventArgs e)
+        {
+            double sum = 0;
+            double sredn;
+
+            for (int i = 0; i < dataGridViewBaza_ZDA.RowCount; i++)
+            {
+                sum += (int)dataGridViewBaza_ZDA.Rows[i].Cells[3].Value;
+            }
+            sredn = Math.Round(sum / dataGridViewBaza_ZDA.Rows.Count,3);
+            textBoxSredn_ZDA.Text = sredn.ToString();
         }
     }
 }

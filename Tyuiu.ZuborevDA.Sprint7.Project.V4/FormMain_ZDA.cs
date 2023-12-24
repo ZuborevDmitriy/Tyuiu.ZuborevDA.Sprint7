@@ -86,6 +86,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                 buttonSearch_ZDA.Enabled = true;
                 buttonRemove_ZDA.Enabled = true;
                 buttonGraphic_ZDA.Enabled = true;
+                buttonSrAr_ZDA.Enabled = true;
 
             }
             catch
@@ -195,6 +196,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                     buttonSearch_ZDA.Enabled = true;
                     buttonRemove_ZDA.Enabled = true;
                     buttonGraphic_ZDA.Enabled = true;
+                    buttonSrAr_ZDA.Enabled = true;
                 }
             }
             catch

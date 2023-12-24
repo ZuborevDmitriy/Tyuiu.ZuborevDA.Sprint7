@@ -256,5 +256,78 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             }
 
         }
+
+        private void buttonGraphic_ZDA_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(radioButtonGist_ZDA.Checked)
+                {
+                    for (int i = 0; i < dataGridViewBaza_ZDA.Rows.Count; i++)
+                    {
+                        chartGraphic_ZDA.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisX.Title = "Год издания";
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisY.Title = "Цена";
+
+                        int x = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Год_издания"].Value);
+                        int y = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Цена_р."].Value);
+                        chartGraphic_ZDA.Series[0].Points.AddXY(x, y);
+
+                    }
+                }
+
+                if (radioButtonGist_ZDA.Checked)
+                {
+                    for (int i = 0; i < dataGridViewBaza_ZDA.Rows.Count; i++)
+                    {
+                        chartGraphic_ZDA.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
+
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisX.Title = "Год издания";
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisY.Title = "Цена";
+
+                        int x = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Год_издания"].Value);
+                        int y = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Цена_р."].Value);
+                        chartGraphic_ZDA.Series[0].Points.AddXY(x, y);
+
+                    }
+                }
+
+                if (radioButtonFunct_ZDA.Checked)
+                {
+                    for (int i = 0; i < dataGridViewBaza_ZDA.Rows.Count; i++)
+                    {
+                        chartGraphic_ZDA.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisX.Title = "Год издания";
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisY.Title = "Цена";
+
+                        int x = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Год_издания"].Value);
+                        int y = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Цена_р."].Value);
+                        chartGraphic_ZDA.Series[0].Points.AddXY(x, y);
+
+                    }
+                }
+                if (radioButtonDiag_ZDA.Checked)
+                {
+                    for (int i = 0; i < dataGridViewBaza_ZDA.Rows.Count; i++)
+                    {
+                        chartGraphic_ZDA.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisX.Title = "Год издания";
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisY.Title = "Цена";
+
+                        int x = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Год_издания"].Value);
+                        int y = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Цена_р."].Value);
+                        chartGraphic_ZDA.Series[0].Points.AddXY(x, y);
+
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Что-то пошло не так.", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

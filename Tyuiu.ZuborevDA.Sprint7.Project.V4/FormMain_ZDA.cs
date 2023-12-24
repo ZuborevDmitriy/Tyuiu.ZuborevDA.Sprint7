@@ -277,34 +277,21 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                     }
                 }
 
-                if (radioButtonGist_ZDA.Checked)
-                {
-                    for (int i = 0; i < dataGridViewBaza_ZDA.Rows.Count; i++)
-                    {
-                        chartGraphic_ZDA.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-
-                        this.chartGraphic_ZDA.ChartAreas[0].AxisX.Title = "Год издания";
-                        this.chartGraphic_ZDA.ChartAreas[0].AxisY.Title = "Цена";
-
-                        int x = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Год_издания"].Value);
-                        int y = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Цена_р."].Value);
-                        chartGraphic_ZDA.Series[0].Points.AddXY(x, y);
-
-                    }
-                }
-
                 if (radioButtonFunct_ZDA.Checked)
                 {
                     for (int i = 0; i < dataGridViewBaza_ZDA.Rows.Count; i++)
                     {
-                        chartGraphic_ZDA.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+                        chartGraphic_ZDA.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
 
-                        this.chartGraphic_ZDA.ChartAreas[0].AxisX.Title = "Год издания";
-                        this.chartGraphic_ZDA.ChartAreas[0].AxisY.Title = "Цена";
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisX.Title = "Автор";
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisY.Title = "Кол-во книг";
 
-                        int x = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Год_издания"].Value);
-                        int y = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Цена_р."].Value);
-                        chartGraphic_ZDA.Series[0].Points.AddXY(x, y);
+                        Dictionary<string, int> ExceptionMessages = new Dictionary<string, int>();
+
+                        ExceptionMessages.Add(Convert.ToString(dataGridViewBaza_ZDA.Rows[i].Cells["Автор"].Value), 20);
+
+                        foreach (KeyValuePair<string, int> exception in ExceptionMessages)
+                            chartGraphic_ZDA.Series[0].Points.AddXY(exception.Key, exception.Value);
 
                     }
                 }

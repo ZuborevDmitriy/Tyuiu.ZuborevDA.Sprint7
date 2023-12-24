@@ -19,5 +19,14 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4.Test
             bool wait = true;
             Assert.AreEqual(wait, res);
         }
+        [TestMethod]
+        public void SearchOutPutFile()
+        {
+            string path = @"C:\Users\BobaBibkov\source\repos\Tyuiu.ZuborevDA.Sprint7\Tyuiu.ZuborevDA.Sprint7.Project.V4\OutPutBaza.csv";
+            FileInfo info = new FileInfo(path);
+            bool res = info.Exists;
+            bool wait = true;
+            Assert.AreEqual(wait, res);
+        }
     }
 }

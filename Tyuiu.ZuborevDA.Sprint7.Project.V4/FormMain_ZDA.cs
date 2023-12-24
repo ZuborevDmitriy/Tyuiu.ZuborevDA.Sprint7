@@ -131,7 +131,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                             str = str + dataGridViewBaza_ZDA.Rows[i].Cells[j].Value;
                         }
                     }
-                    File.AppendAllText(path, str + Environment.NewLine);
+                    File.AppendAllText(path, str + Environment.NewLine, Encoding.Default);
                     str = "";
                 }
                 MessageBox.Show("Данные сохранены", "Внимание!");
@@ -296,7 +296,8 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                         chartGraphic_ZDA.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
 
                         this.chartGraphic_ZDA.ChartAreas[0].AxisX.Title = "Автор";
-                        this.chartGraphic_ZDA.ChartAreas[0].AxisY.Title = "Кол-во книг";
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisY.Title = "Год_издания";
+                        chartGraphic_ZDA.Series[0].Points.AddXY(dataGridViewBaza_ZDA.Rows[i].Cells["Автор"].Value, dataGridViewBaza_ZDA.Rows[i].Cells["Год_издания"].Value);
 
                     }
                 }
@@ -305,16 +306,21 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
                     for (int i = 0; i < dataGridViewBaza_ZDA.Rows.Count; i++)
                     {
                         chartGraphic_ZDA.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisX.Title = "Автор";
+                        this.chartGraphic_ZDA.ChartAreas[0].AxisY.Title = "Колличество книг";
 
-                        this.chartGraphic_ZDA.ChartAreas[0].AxisX.Title = "Год издания";
-                        this.chartGraphic_ZDA.ChartAreas[0].AxisY.Title = "Цена";
+                        int count = 0;
 
-                        int x = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Год_издания"].Value);
-                        int y = Convert.ToInt32(dataGridViewBaza_ZDA.Rows[i].Cells["Цена_р."].Value);
-                        chartGraphic_ZDA.Series[0].Points.AddXY(x, y);
+                        if (dataGridViewBaza_ZDA.Rows[i].Cells[1].Value == dataGridViewBaza_ZDA.Rows[i].Cells[1].Value)
+                        {
+                            count += (int)dataGridViewBaza_ZDA.RowCount;
+                        }
 
+                        chartGraphic_ZDA.Series[0].Points.AddXY(dataGridViewBaza_ZDA.Rows[i].Cells["Автор"].Value, count);
                     }
+
                 }
+                buttonDeleteChart_ZDA.Enabled = true;
             }
             catch
             {
@@ -359,6 +365,21 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             }
             sredn = Math.Round(sum / dataGridViewBaza_ZDA.Rows.Count,3);
             textBoxSredn_ZDA.Text = sredn.ToString();
+        }
+
+        private void buttonDeleteChart_ZDA_Click(object sender, EventArgs e)
+        {
+            chartGraphic_ZDA.Series[0].Points.Clear();
+        }
+
+        private void buttonVozrUbivan_ZDA_Click(object sender, EventArgs e)
+        {
+            dataGridViewBaza_ZDA.Sort(dataGridViewBaza_ZDA.Columns["Цена_р."], ListSortDirection.Descending);
+        }
+
+        private void buttonSortYear_ZDA_Click(object sender, EventArgs e)
+        {
+            dataGridViewBaza_ZDA.Sort(dataGridViewBaza_ZDA.Columns["Год_издания"], ListSortDirection.Descending);
         }
     }
 }

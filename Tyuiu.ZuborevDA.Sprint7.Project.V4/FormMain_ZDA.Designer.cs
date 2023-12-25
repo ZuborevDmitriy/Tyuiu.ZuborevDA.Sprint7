@@ -130,14 +130,14 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.загрузитьToolStripMenuItem.Text = "Загрузить";
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
             // 
@@ -690,7 +690,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.MinimumSize = new System.Drawing.Size(1380, 575);
             this.Name = "FormMain_ZDA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Спринт6|Проект|Вариант4|АСОиУБ-23-2|Зуборев Д.А";
+            this.Text = "Спринт7|Проект|Вариант4|АСОиУБ-23-2|Зуборев Д.А";
             this.Load += new System.EventHandler(this.FormMain_ZDA_Load);
             this.menuStripUpPanel_ZDA.ResumeLayout(false);
             this.menuStripUpPanel_ZDA.PerformLayout();

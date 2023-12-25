@@ -29,12 +29,40 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormInfo_ZDA));
+            this.textBoxInfo_ZDA = new System.Windows.Forms.TextBox();
+            this.SuspendLayout();
+            // 
+            // textBoxInfo_ZDA
+            // 
+            this.textBoxInfo_ZDA.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBoxInfo_ZDA.Location = new System.Drawing.Point(0, 0);
+            this.textBoxInfo_ZDA.Multiline = true;
+            this.textBoxInfo_ZDA.Name = "textBoxInfo_ZDA";
+            this.textBoxInfo_ZDA.ReadOnly = true;
+            this.textBoxInfo_ZDA.Size = new System.Drawing.Size(406, 152);
+            this.textBoxInfo_ZDA.TabIndex = 0;
+            this.textBoxInfo_ZDA.Text = resources.GetString("textBoxInfo_ZDA.Text");
+            // 
+            // FormInfo_ZDA
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "FormInfo";
+            this.ClientSize = new System.Drawing.Size(406, 152);
+            this.Controls.Add(this.textBoxInfo_ZDA);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "FormInfo_ZDA";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Справочная информация";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.TextBox textBoxInfo_ZDA;
     }
 }

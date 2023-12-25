@@ -36,7 +36,6 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             this.действияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.загрузитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.сохранитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.удалитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.справочнаяИнформацияToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.выходToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -123,8 +122,7 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // 
             this.действияToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.загрузитьToolStripMenuItem,
-            this.сохранитьToolStripMenuItem,
-            this.удалитьToolStripMenuItem});
+            this.сохранитьToolStripMenuItem});
             this.действияToolStripMenuItem.Name = "действияToolStripMenuItem";
             this.действияToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
             this.действияToolStripMenuItem.Text = "Действия";
@@ -132,22 +130,16 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
             // загрузитьToolStripMenuItem
             // 
             this.загрузитьToolStripMenuItem.Name = "загрузитьToolStripMenuItem";
-            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.загрузитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.загрузитьToolStripMenuItem.Text = "Загрузить";
             this.загрузитьToolStripMenuItem.Click += new System.EventHandler(this.загрузитьToolStripMenuItem_Click);
             // 
             // сохранитьToolStripMenuItem
             // 
             this.сохранитьToolStripMenuItem.Name = "сохранитьToolStripMenuItem";
-            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
+            this.сохранитьToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.сохранитьToolStripMenuItem.Text = "Сохранить";
             this.сохранитьToolStripMenuItem.Click += new System.EventHandler(this.сохранитьToolStripMenuItem_Click);
-            // 
-            // удалитьToolStripMenuItem
-            // 
-            this.удалитьToolStripMenuItem.Name = "удалитьToolStripMenuItem";
-            this.удалитьToolStripMenuItem.Size = new System.Drawing.Size(133, 22);
-            this.удалитьToolStripMenuItem.Text = "Удалить";
             // 
             // оПрограммеToolStripMenuItem
             // 
@@ -726,7 +718,6 @@ namespace Tyuiu.ZuborevDA.Sprint7.Project.V4
         private System.Windows.Forms.MenuStrip menuStripUpPanel_ZDA;
         private System.Windows.Forms.ToolStripMenuItem действияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem загрузитьToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem удалитьToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem оПрограммеToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem справочнаяИнформацияToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem выходToolStripMenuItem;
